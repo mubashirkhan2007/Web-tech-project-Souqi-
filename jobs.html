@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+  filename:      jobs.html
+  author:        Minna
+  created:       21/10/2026
+  last modified: 25/10/2026
+  description:   Position descriptions page for Souqi, an online retail platform
+                 (G05 - E-Commerce & Digital Retail Platform). Lists open roles
+                 and links applicants to apply.html. Styles: css/styles.css
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- needed so the page scales properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Careers at Souqi. Current vacancies: Front-End Web Developer and UX/UI Designer.">
+  <meta name="keywords" content="Souqi, careers, jobs, Doha, Qatar, e-commerce, online retail, front-end developer, UX designer">
+  <meta name="author" content="Minna">
+  <title>Jobs | Souqi</title>
+
+  <!-- main stylesheet used by all pages -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- embedded CSS for the reference number boxes, only used on this page -->
+  <style>
+    .ref-number {
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+      background-color: #f2f2f2;
+      padding: 2px 6px;
+      border: 1px solid #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header and nav (same as index.html). aria-current marks Jobs as the current page -->
+  <header>
+    <p class="site-name"><a href="index.html">Souqi</a></p>
+    <nav aria-label="Main navigation">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html" aria-current="page">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="jobs-page">
+    <h1>Careers at Souqi</h1>
+    <!-- short intro, the full company info is on the home page -->
+    <p class="jobs-intro">
+      Join the Doha-based digital team behind Souqi's online store and help build
+      fast, accessible shopping experiences for customers across Qatar.
+    </p>
+
+    <!-- quick links that jump to each job -->
+    <p>
+      <strong>Open positions:</strong>
+      <a href="#job1">Front-End Web Developer</a> |
+      <a href="#job2">UX/UI Designer</a>
+    </p>
+
+    <!-- aside with benefits and inclusion info. it goes before the jobs
+         so it floats on the right next to them -->
+    <aside class="jobs-aside" aria-labelledby="aside-title">
+      <h2 id="aside-title">Working at Souqi</h2>
+      <ul>
+        <li>Tax-free salary paid monthly in Qatari riyals (QAR)</li>
+        <li>Housing and transport allowance</li>
+        <li>Annual return flight home and end-of-service gratuity</li>
+        <li>Hybrid work: four days in our Doha office</li>
+        <li>Staff discount on Souqi orders</li>
+      </ul>
+
+      <!-- inclusive employment statement -->
+      <h3>Inclusive employment</h3>
+      <p>
+        Souqi welcomes applicants of every background, nationality, gender and age.
+        Our customers come from many communities, and a team that reflects them helps
+        us build an online store that works for everyone.
+      </p>
+      <p>
+        We provide adjustments for applicants with disability. Tell us what support
+        you need when you apply.
+      </p>
+    </aside>
+
+    <!-- Job 1: Front-End Web Developer -->
+    <section id="job1" class="job" aria-labelledby="job1-title">
+      <h2 id="job1-title">Front-End Web Developer</h2>
+
+      <!-- job details: ref number, salary, who they report to, location -->
+      <dl class="job-details">
+        <dt>Reference number</dt>
+        <dd><span class="ref-number">SQF01</span></dd>
+        <dt>Salary</dt>
+        <dd>QAR 15,000 to QAR 22,000 per month (tax-free) plus allowances</dd>
+        <dt>Reports to</dt>
+        <dd>Head of Digital Engineering</dd>
+        <dt>Location and type</dt>
+        <dd>Doha, Qatar, full-time, hybrid</dd>
+      </dl>
+
+      <p>
+        Build and improve the pages our customers use every day, from product
+        listings to checkout, with a focus on speed, accessibility and clean code.
+      </p>
+
+      <h3>Key responsibilities</h3>
+      <ul>
+        <li>Build and maintain product listing, product detail and checkout pages using semantic HTML5 and CSS3</li>
+        <li>Turn designers' wireframes into responsive pages for mobile, tablet and desktop</li>
+        <li>Make sure every page meets web accessibility standards (WCAG)</li>
+        <li>Improve page load speed for product listings and checkout</li>
+        <li>Manage code changes with Git and GitHub and review teammates' code</li>
+        <li>Work with the security team to protect customer details entered in forms</li>
+      </ul>
+
+      <h3>Requirements</h3>
+      <h4>Essential</h4>
+      <ul>
+        <li>Degree in IT or computer science, or equivalent work experience</li>
+        <li>At least 2 years of front-end development experience</li>
+        <li>Strong skills in HTML5, CSS3 and responsive design</li>
+        <li>Experience using Git for version control in a team</li>
+      </ul>
+      <h4>Preferable</h4>
+      <ul>
+        <li>Experience working on an e-commerce or online retail website</li>
+        <li>Experience using Jira in an agile team</li>
+        <li>An online portfolio or GitHub profile showing your work</li>
+      </ul>
+    </section>
+
+    <!-- Job 2: UX/UI Designer -->
+    <section id="job2" class="job" aria-labelledby="job2-title">
+      <h2 id="job2-title">UX/UI Designer</h2>
+
+      <dl class="job-details">
+        <dt>Reference number</dt>
+        <dd><span class="ref-number">SQU02</span></dd>
+        <dt>Salary</dt>
+        <dd>QAR 14,000 to QAR 20,000 per month (tax-free) plus allowances</dd>
+        <dt>Reports to</dt>
+        <dd>Product Design Lead</dd>
+        <dt>Location and type</dt>
+        <dd>Doha, Qatar, full-time, hybrid</dd>
+      </dl>
+
+      <p>
+        Shape how customers browse, search and buy on Souqi by researching their
+        needs and designing clear, inclusive shopping journeys.
+      </p>
+
+      <h3>Key responsibilities</h3>
+      <ul>
+        <li>Research customer needs through interviews, surveys and usability testing</li>
+        <li>Design wireframes and prototypes for browsing, search, cart and checkout</li>
+        <li>Keep the colours, fonts and components of Souqi's design system consistent</li>
+        <li>Check that designs meet accessibility standards, including colour contrast</li>
+        <li>Work with developers so designs are built accurately</li>
+      </ul>
+
+      <h3>Requirements</h3>
+      <h4>Essential</h4>
+      <ul>
+        <li>Degree in design or a related field, or equivalent experience</li>
+        <li>At least 2 years designing websites or apps</li>
+        <li>Strong skills in Figma or a similar design tool</li>
+        <li>A portfolio showing your design process, not only finished screens</li>
+      </ul>
+      <h4>Preferable</h4>
+      <ul>
+        <li>Experience designing for e-commerce or online retail</li>
+        <li>Basic knowledge of HTML and CSS</li>
+        <li>Experience designing for culturally and linguistically diverse customers</li>
+      </ul>
+    </section>
+
+    <!-- how to apply - used an ordered list since the steps go in order -->
+    <section class="jobs-howto" aria-labelledby="howto-title">
+      <h2 id="howto-title">How to apply</h2>
+      <ol>
+        <li>Note the reference number of the job you want.</li>
+        <li>Go to the <a href="apply.html">application form</a> and enter that reference number.</li>
+        <li>Fill in your details and select your skills.</li>
+        <li>Submit your application. We reply to every applicant within 10 business days.</li>
+      </ol>
+      <!-- inline CSS to make the closing date italic -->
+      <p style="font-style: italic;">Applications for both roles close on 30 November 2026.</p>
+    </section>
+  </main>
+
+  <!-- footer (same as index.html) with Jira, GitHub and email links -->
+  <footer>
+    <ul>
+      <li><a href="https://YOUR-SITE.atlassian.net/jira/software/projects/SOUQI/boards">Jira project</a></li>
+      <li><a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-">GitHub repository</a></li>
+      <li><a href="mailto:souqi.careers@gmail.com">souqi.careers@gmail.com</a></li>
+    </ul>
+    <p>&copy; 2026 Souqi. Created for COS10026 Web Technology Project.</p>
+  </footer>
+
+  <!--
+    Acknowledgements
+    - Based on the COS10026 Applied Web Project Part 1 brief and rubric
+      (Swinburne University of Technology, 2026).
+    - Souqi is a made-up company based in Doha, Qatar.
+    - Salaries are based on Qatar salary data. Both jobs ask for 2+ years
+      experience so I kept them close to the averages (about QAR 20,600 for
+      front-end developers and QAR 19,800 for UX designers per month):
+      LifeIndexed. (2026). Frontend developer salary in Qatar. Retrieved October 21, 2026,
+        from https://lifeindexed.com/salary/middle-east/qatar/frontend-developer/
+      LifeIndexed. (2026). UX designer salary in Qatar. Retrieved October 21, 2026,
+        from https://lifeindexed.com/salary/middle-east/qatar/ux-designer/
+      Paylab. (n.d.). Frontend developer salary in Qatar. Retrieved October 21, 2026,
+        from https://paylab.com/qa/salaryinfo/information-technology/frontend-developer
+      Paylab. (n.d.). UX designer salary in Qatar. Retrieved October 21, 2026,
+        from https://www.paylab.com/qa/salaryinfo/information-technology/ux-designer
+    - I used Claude (Anthropic) from 21/10/2026 as a tool while building this
+      page. It suggested code, which I reviewed and changed to suit our site, and
+      it explained parts of the code I wasn't sure about.
+      Anthropic. (2026). Claude [Large language model]. https://claude.ai
+  -->
+</body>
+</html>

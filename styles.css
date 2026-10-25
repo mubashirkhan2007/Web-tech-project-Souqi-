@@ -1,0 +1,131 @@
+/*
+filename: styles.css
+author: Mubashir, Hussein, Manahil, Minna, Abdur Rahman
+created: 21/10/2026
+last modified: 25/10/2026
+description: Shared stylesheet for index.html, jobs.html, apply.html, about.html
+*/
+
+/* =====================================================================
+   JOBS PAGE (jobs.html) - Minna
+   These classes are only used on jobs.html.
+   Colours:
+     #0b5d5e  teal (headings, borders, links)
+     #f2a541  orange (job dividers)
+     #1f2933  dark grey (body text)
+     #f7f4ee  off-white (aside and job details background)
+     #eef6f6  light teal (job hover)
+   ===================================================================== */
+
+/* main area of the page. overflow: hidden stops the footer
+   wrapping around the floated aside */
+.jobs-page {
+  padding: 24px 5%;
+  color: #1f2933;
+  overflow: hidden;
+}
+
+/* teal page and job headings */
+.jobs-page h1,
+.jobs-page h2 {
+  color: #0b5d5e;
+}
+
+/* child selector for the Essential and Preferable headings in each job */
+.job > h4 {
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* intro text a bit bigger than normal text */
+.jobs-intro {
+  font-size: 18px;
+  max-width: 700px;
+}
+
+/* aside floated to the right at 25% width with margin, padding and border */
+.jobs-aside {
+  float: right;
+  width: 25%;
+  margin: 0 0 24px 32px;
+  padding: 16px 20px;
+  border: 2px solid #0b5d5e;
+  background-color: #f7f4ee;
+}
+
+/* removes the extra space above the aside heading */
+.jobs-aside h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* line to split the benefits from the inclusive employment part */
+.jobs-aside h3 {
+  padding-top: 12px;
+  border-top: 1px solid #0b5d5e;
+}
+
+/* orange line and space between jobs. overflow: hidden keeps
+   the job text next to the aside instead of going under it */
+.job {
+  overflow: hidden;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 3px solid #f2a541;
+}
+
+/* light teal background when the mouse is over a job, so it's clear
+   which job you're reading. padding stops the text touching the edge */
+.job:hover {
+  background-color: #eef6f6;
+}
+
+.job {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* box for the job details */
+.job-details {
+  padding: 12px 16px;
+  background-color: #f7f4ee;
+  border-left: 5px solid #0b5d5e;
+}
+
+.job-details dt {
+  font-weight: bold;
+  color: #0b5d5e;
+}
+
+.job-details dd {
+  margin: 0 0 8px 0;
+}
+
+/* attribute selector - makes the links that jump to each job bold */
+.jobs-page a[href*="#"] {
+  font-weight: bold;
+  color: #0b5d5e;
+}
+
+/* dark outline on links when using the keyboard, easy to see on the light background */
+.jobs-page a:focus {
+  outline: 3px solid #1f2933;
+  outline-offset: 2px;
+}
+
+/* space between the how to apply steps */
+.jobs-howto li {
+  margin-bottom: 6px;
+}
+
+/* on screens 768px or smaller the aside stops floating and goes
+   full width, because 25% is too narrow to read on a phone */
+@media only screen and (max-width: 768px) {
+  .jobs-aside {
+    float: none;
+    width: auto;
+    margin: 0 0 24px 0;
+  }
+}
+/* ===================== END JOBS PAGE ===================== */
