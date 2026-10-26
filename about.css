@@ -1,0 +1,80 @@
+/* G05 — About page only: learned selectors, colours, borders and tables */
+
+/* Maroon introduction with a gold detail */
+.intro {
+    background-color: var(--maroon);
+    color: #FFFFFF;
+    border: 0;
+    border-left: 7px solid var(--gold);
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.intro h2 { color: #FFFFFF; font-size: 34px; }
+.eyebrow {
+    color: #F5D5A3;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+/* Plum accent on group info; gold on team section */
+.group-details { border-top: 5px solid var(--plum); }
+.team-section { border-top: 5px solid var(--gold); }
+.team-section h2 { color: var(--plum); }
+
+ul ul { margin-top: 6px; }
+.team-list dt {
+    color: var(--blue);
+    font-weight: bold;
+    margin-top: 22px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border);
+}
+.team-list dd { margin: 7px 0 7px 18px; }
+.student-id {
+    display: inline-block;
+    background-color: #F1E9F2;
+    color: #543861;
+    border: 1px solid #D7C5DD;
+    border-radius: 5px;
+    padding: 2px 9px;
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+/* Photo: required figure border, gold against plum */
+.photo-section { background-color: #F0EBF2; }
+figure {
+    margin: 0;
+    padding: 15px;
+    border: 3px solid var(--plum);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+figure img { max-width: 100%; height: auto; border-radius: 4px; }
+figcaption { color: var(--maroon); margin-top: 10px; font-style: italic; }
+
+/* Fun-facts table: required hex colours and row hover */
+.facts-section { border-top: 5px solid var(--maroon); }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+caption { color: #6B4C7A; font-weight: bold; padding: 12px; }
+th, td { border: 1px solid #DDD4C7; padding: 12px; text-align: left; }
+thead { background-color: #1F3A5F; color: #FFFFFF; }
+tbody tr:nth-child(even) { background-color: #F7F3EC; }
+tbody tr:hover { background-color: #F1E4D7; }
+
+/* Respect and inclusion section */
+.acknowledgement {
+    background-color: #F5EDF1;
+    border-left: 6px solid var(--plum);
+}
+.acknowledgement h2 { color: var(--maroon); }
+
+@media (max-width: 600px) {
+    .intro h2 { font-size: 27px; }
+    .student-id { margin-left: 0; }
+    .team-list dd { margin-left: 10px; }
+}
