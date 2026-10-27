@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for a job at Souqi">
+    <title>Apply | Souqi</title>
+
+    <link rel="icon" href="image.jpg" type="image/x-icon ">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img src="image.jpg" alt="Souqi Logo" width="40">
+            <h2>SOUQI</h2>
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="about.html">About</a>
+            <a href="apply.html">Apply</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Apply for a Role</h1>
+
+        <p>
+            Join the Souqi team! Enter the job reference number
+            from our <a href="jobs.html">Jobs page</a>
+            and complete the application form.
+        </p>
+
+        <p>All fields are required except Other Skills.</p>
+
+        <!-- Application Form -->
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php"
+              method="post">
+
+            <!-- Job Reference -->
+            <p>
+                <label for="ref">Job Reference Number:</label>
+                <input type="text" id="ref" name="ref"
+                       maxlength="5"
+                       pattern="[A-Za-z0-9]{5}"
+                       title="Enter exactly 5 letters or numbers"
+                       required>
+            </p>
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname"
+                           name="firstname"
+                           maxlength="20"
+                           pattern="[A-Za-z]{1,20}"
+                           required>
+                </p>
+
+                <p>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname"
+                           name="lastname"
+                           maxlength="20"
+                           pattern="[A-Za-z]{1,20}"
+                           required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="text" id="dob" name="dob"
+                           placeholder="dd/mm/yyyy"
+                           pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                           title="Use dd/mm/yyyy format"
+                           required>
+                </p>
+
+                <p>Gender:</p>
+
+                <p>
+                    <input type="radio" id="female"
+                           name="gender" value="female" required>
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="male"
+                           name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="other"
+                           name="gender" value="other">
+                    <label for="other">Other</label>
+                </p>
+
+            </fieldset>
+
+            <!-- Address -->
+            <fieldset>
+                <legend>Address</legend>
+
+                <p>
+                    <label for="street">Street Address:</label>
+                    <input type="text" id="street" name="street"
+                           maxlength="40" required>
+                </p>
+
+                <p>
+                    <label for="suburb">Suburb/Town:</label>
+                    <input type="text" id="suburb" name="suburb"
+                           maxlength="40" required>
+                </p>
+
+                <p>
+                    <label for="state">State:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select State</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="postcode">Postcode:</label>
+                    <input type="text" id="postcode"
+                           name="postcode" maxlength="4"
+                           pattern="[0-9]{4}" required>
+                </p>
+
+            </fieldset>
+
+            <!-- Contact Details -->
+            <fieldset>
+                <legend>Contact Details</legend>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email"
+                           name="email" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{8,12}"
+                           title="Enter 8 to 12 digits"
+                           required>
+                </p>
+
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend>Skills</legend>
+
+                <p>Select your skills:</p>
+
+                <input type="checkbox" id="html"
+                       name="skills" value="html">
+                <label for="html">HTML5</label>
+
+                <input type="checkbox" id="css"
+                       name="skills" value="css">
+                <label for="css">CSS3</label>
+
+                <input type="checkbox" id="git"
+                       name="skills" value="git">
+                <label for="git">Git</label>
+
+                <input type="checkbox" id="figma"
+                       name="skills" value="figma">
+                <label for="figma">Figma</label>
+
+                <input type="checkbox" id="accessibility"
+                       name="skills" value="accessibility">
+                <label for="accessibility">Accessibility</label>
+
+            </fieldset>
+
+            <!-- Other Skills -->
+            <p>
+                <label for="otherskills">Other Skills:</label>
+            </p>
+
+            <p>
+                <textarea id="otherskills" name="otherskills"
+                          rows="4" cols="40"></textarea>
+            </p>
+
+            <!-- Submit -->
+            <p>
+                <button type="submit">Submit Application</button>
+            </p>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <img src="image.jpg" alt="Souqi Logo" width="100">
+
+        <p>Good things happen when we build together.</p>
+
+        <h3>Explore</h3>
+
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About Us</a>
+        <a href="apply.html">Apply</a>
+
+        <h3>Contact Us</h3>
+
+        <p>
+            <a href="mailto:info@souqi.com">info@souqi.com</a>
+        </p>
+
+        <p>
+            <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-">
+                GitHub Repository
+            </a>
+        </p>
+
+        <p>
+            &copy; 2026 Souqi.
+            A fictional company created for a university project.
+        </p>
+
+        <a href="#">Back to Top</a>
+
+    </footer>
+
+</body>
+</html>
