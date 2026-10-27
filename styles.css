@@ -1,0 +1,167 @@
+/*
+filename: styles.css
+author: Mubashir, Hussein, Manahil, Minna, Abdur Rahman
+created: 21/10/2026
+last modified: 27/10/2026
+description: Shared stylesheet for index.html, jobs.html, apply.html, about.html
+*/
+
+/* SOUQI — shared branding and layout for all 4 pages */
+/* Typography: elegant editorial logo, clear modern headings and readable body text */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap');
+
+:root {
+    --blue: #1F3A5F;
+    --gold: #B08A3C;
+    --plum: #6B4C7A;
+    --maroon: #7A3E3A;
+    --ivory: #F7F3EC;
+    --text: #2D2A26;
+    --muted: #746E68;
+    --border: #DDD4C7;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--text);
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* Shared header and navigation */
+header {
+    background-color: var(--blue);
+    color: var(--white);
+    border-bottom: 4px solid var(--gold);
+    padding: 25px 0 18px;
+}
+
+.logo {
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #E5C993;
+    margin: 4px 0 22px;
+}
+
+/* removes bullets and indents when the nav or footer links are in a list */
+nav ul,
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li,
+footer li {
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    padding: 7px 12px;
+    margin: 0 9px 4px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #F4DEB5;
+    border-bottom-color: #E5C993;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Shared headings, sections, and links */
+main {
+    padding-top: 38px;
+    padding-bottom: 55px;
+}
+
+h1, h2, h3 {
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    line-height: 1.3;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 27px;
+    color: var(--blue);
+    letter-spacing: -0.5px;
+}
+
+section {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 29px;
+    margin-bottom: 24px;
+}
+
+p { margin-top: 0; }
+
+main a { color: var(--blue); }
+main a:hover { color: var(--maroon); }
+
+/* Shared button rules for group teammates */
+.button {
+    display: inline-block;
+    background-color: var(--maroon);
+    color: #FFFFFF;
+    border: 2px solid var(--maroon);
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: #FFFFFF;
+}
+
+footer {
+    padding: 29px 0;
+    background-color: var(--blue);
+    color: white;
+    border-top: 4px solid var(--gold);
+    text-align: center;
+}
+footer p { margin: 5px 0; }
+footer a { color: #F4DEB5; margin: 0 8px; }
+footer a:hover { color: #FFFFFF; }
+
+@media (max-width: 600px) {
+    .logo { font-size: 34px; }
+    section { padding: 19px; }
+    h2 { font-size: 23px; }
+    nav a { margin-right: 4px; padding: 6px 8px; }
+}
