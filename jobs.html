@@ -6,7 +6,7 @@
   last modified: 25/10/2026
   description:   Position descriptions page for Souqi, an online retail platform
                  (G05 - E-Commerce & Digital Retail Platform). Lists open roles
-                 and links applicants to apply.html. Styles: css/styles.css
+                 and links applicants to apply.html. Styles: styles.css
 -->
 <html lang="en">
 <head>
@@ -17,99 +17,170 @@
   <meta name="keywords" content="Souqi, careers, jobs, Doha, Qatar, e-commerce, online retail, front-end developer, UX designer">
   <meta name="author" content="Minna">
   <title>Jobs | Souqi</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- main stylesheet used by all pages -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- embedded CSS for the reference number boxes, only used on this page -->
   <style>
     .ref-number {
       font-family: "Courier New", Courier, monospace;
       font-weight: bold;
-      background-color: #f2f2f2;
-      padding: 2px 6px;
-      border: 1px solid #cccccc;
+      background-color: #E9D9B8;
+      padding: 2px 8px;
+      border: 1px solid #B08A3C;
+      border-radius: 3px;
     }
   </style>
 </head>
 
-<body>
-  <!-- header and nav (same as index.html). aria-current marks Jobs as the current page -->
-  <header>
-    <p class="site-name"><a href="index.html">Souqi</a></p>
-    <nav aria-label="Main navigation">
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html" aria-current="page">Jobs</a></li>
-        <li><a href="apply.html">Apply</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+<body id="top">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Souqi, home">
+        <img class="brand-mark" src="images/logo-mark.png" width="34" height="38" alt="">
+        <span class="brand-name">SOUQI</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="jobs.html" aria-current="page">Jobs</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="apply.html">Apply <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
   </header>
 
-  <main class="jobs-page">
-    <h1>Careers at Souqi</h1>
-    <!-- short intro, the full company info is on the home page -->
-    <p class="jobs-intro">
-      Join the Doha-based digital team behind Souqi's online store and help build
-      fast, accessible shopping experiences for customers across Qatar.
-    </p>
+  <main id="main" class="jobs-page">
+    <section class="jobs-hero" aria-labelledby="jobs-title">
+      <div class="jobs-hero__bg" aria-hidden="true"><span class="arch"></span><span class="hline"></span></div>
+      <div class="wrap jobs-hero__grid">
+        <div class="jobs-hero__text">
+          <p class="kicker jh-1">Careers at Souqi</p>
+          <h1 id="jobs-title"><span class="ln"><span class="jh-2">Your next move</span></span><span class="ln"><span class="jh-3"><em>starts here.</em></span></span></h1>
+          <p class="jobs-intro jh-4">Good ideas deserve good people. Join our Doha-based team and help shape how Qatar discovers, shops and connects online.</p>
+          <div class="jobs-hero__meta jh-5">
+            <p class="jobs-count"><span class="dock-num dn-2"></span><span class="jobs-count__label">open roles</span></p>
+            <a class="btn btn--gold" href="#roles">See the roles <span aria-hidden="true">&darr;</span></a>
+          </div>
+          <ul class="role-chips jh-6" aria-label="Departments"><li>Engineering</li><li>Design &amp; UX</li><li>Doha, hybrid</li></ul>
+        </div>
+        <div class="jobs-hero__photo"><figure class="photo-slot photo-slot--portrait ">
+              <!-- PHOTO SLOT. To use a real photo, replace the placeholder div below with:
+                   <img src="images/jobs-hero.jpg" alt="A developer and a designer reviewing a website layout together" width="1200" height="750"> -->
+              <div class="photo-slot__media"><div class="photo-slot__frame"><span class="photo-slot__tag">Photo: images/jobs-hero.jpg</span><p>Two colleagues, a developer and a designer, reviewing a website layout together on a laptop in a modern Doha office.</p></div></div>
+              <figcaption>Our digital team at work.</figcaption>
+            </figure></div>
+      </div>
+      <a class="scroll-cue" href="#roles"><span>Scroll</span><i aria-hidden="true"></i></a>
+    </section>
 
-    <!-- quick links that jump to each job -->
-    <p>
-      <strong>Open positions:</strong>
-      <a href="#job1">Front-End Web Developer</a> |
-      <a href="#job2">UX/UI Designer</a>
-    </p>
+    <div class="jobs-marquee" aria-label="Build what is next at Souqi">
+      <div class="jobs-marquee__track" aria-hidden="true">
+        <span>GOOD IDEAS LIVE HERE</span><b>✳</b><span>BUILD WHAT’S NEXT</span><b>✳</b><span>MADE FOR REAL PEOPLE</span><b>✳</b><span>GOOD IDEAS LIVE HERE</span><b>✳</b><span>BUILD WHAT’S NEXT</span><b>✳</b>
+      </div>
+    </div>
 
-    <!-- aside with benefits and inclusion info. it goes before the jobs
-         so it floats on the right next to them -->
-    <aside class="jobs-aside" aria-labelledby="aside-title">
-      <h2 id="aside-title">Working at Souqi</h2>
-      <ul>
-        <li>Tax-free salary paid monthly in Qatari riyals (QAR)</li>
-        <li>Housing and transport allowance</li>
-        <li>Annual return flight home and end-of-service gratuity</li>
-        <li>Hybrid work: four days in our Doha office</li>
-        <li>Staff discount on Souqi orders</li>
-      </ul>
+    <section id="roles" class="positions" aria-labelledby="positions-title">
+      <div class="wrap">
+        <aside class="jobs-aside" aria-labelledby="aside-title">
+        <h2 id="aside-title">Working at Souqi</h2>
+        <p class="jobs-aside__tag">More than a job. A place to belong.</p>
+        <ul class="benefits">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg><span>Competitive salary</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Flexible working culture</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 20h18M5 16l4-5 3 3 6-7"/><path d="M14 7h4v4"/></svg><span>Professional growth</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14c3 0 6 1.4 6 5"/></svg><span>Supportive team environment</span></li>
+        </ul>
+        <a class="aside-link" href="about.html">Learn more about our culture <span aria-hidden="true">&rarr;</span></a>
+      </aside>
+        <div class="positions__main">
+          <div class="positions__head">
+            <div>
+              <p class="positions__label">Available positions</p>
+              <h2 id="positions-title">Find your role</h2>
+            </div>
+            <p class="positions__desc"><strong>Two teams. Real impact.</strong><span>Explore our current openings and see where you fit in.</span></p>
+          </div>
+          <article class="card-role card-role--eng">
+            <span class="card-role__num" aria-hidden="true">01</span>
+            <div class="card-role__body">
+              <p class="card-role__dept">Engineering</p>
+              <h3><a href="#job1">Front-End Web <em>Developer</em></a></h3>
+              <p class="card-role__desc">Build and improve the pages our customers use every day, from product
+        listings to checkout, with a focus on speed, accessibility and clean code.</p>
+              <ul class="card-role__meta" aria-label="Role summary">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Doha, Qatar</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/></svg> Full-time</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg> QAR 15,000 to 22,000 / month</li>
+              </ul>
+            </div>
+            <div class="card-role__end">
+              <span class="ref-number">REF: SQF01</span>
+              <span class="card-role__arrow" aria-hidden="true">&rarr;</span>
+            </div>
+          </article>
+          <article class="card-role card-role--design">
+            <span class="card-role__num" aria-hidden="true">02</span>
+            <div class="card-role__body">
+              <p class="card-role__dept">Design &amp; UX</p>
+              <h3><a href="#job2">UX/UI <em>Designer</em></a></h3>
+              <p class="card-role__desc">Shape how customers browse, search and buy on Souqi by researching their
+        needs and designing clear, inclusive shopping journeys.</p>
+              <ul class="card-role__meta" aria-label="Role summary">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Doha, Qatar</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/></svg> Full-time</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg> QAR 14,000 to 20,000 / month</li>
+              </ul>
+            </div>
+            <div class="card-role__end">
+              <span class="ref-number">REF: SQU02</span>
+              <span class="card-role__arrow" aria-hidden="true">&rarr;</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <!-- inclusive employment statement -->
-      <h3>Inclusive employment</h3>
-      <p>
-        Souqi welcomes applicants of every background, nationality, gender and age.
-        Our customers come from many communities, and a team that reflects them helps
-        us build an online store that works for everyone.
-      </p>
-      <p>
-        We provide adjustments for applicants with disability. Tell us what support
-        you need when you apply.
-      </p>
-    </aside>
-
-    <!-- Job 1: Front-End Web Developer -->
-    <section id="job1" class="job" aria-labelledby="job1-title">
-      <h2 id="job1-title">Front-End Web Developer</h2>
-
-      <!-- job details: ref number, salary, who they report to, location -->
-      <dl class="job-details">
-        <dt>Reference number</dt>
-        <dd><span class="ref-number">SQF01</span></dd>
-        <dt>Salary</dt>
-        <dd>QAR 15,000 to QAR 22,000 per month (tax-free) plus allowances</dd>
-        <dt>Reports to</dt>
-        <dd>Head of Digital Engineering</dd>
-        <dt>Location and type</dt>
-        <dd>Doha, Qatar, full-time, hybrid</dd>
-      </dl>
-
-      <p>
-        Build and improve the pages our customers use every day, from product
-        listings to checkout, with a focus on speed, accessibility and clean code.
-      </p>
-
-      <h3>Key responsibilities</h3>
-      <ul>
+    <div id="roles-detail" class="details-zone">
+      <div class="wrap details-intro">
+        <p class="positions__label">Position details</p>
+        <h2>Everything you need to know</h2>
+        <p class="details-hint">Choose a role above to open its full description. Click the role card, or pick one here:</p>
+        <ul class="details-pick" aria-label="Open a role description">
+          <li><a href="#job1"><span class="details-pick__num" aria-hidden="true">01</span><span>Front-End Web Developer<small>Engineering &middot; SQF01</small></span></a></li>
+          <li><a href="#job2"><span class="details-pick__num" aria-hidden="true">02</span><span>UX/UI Designer<small>Design &amp; UX &middot; SQU02</small></span></a></li>
+        </ul>
+      </div>
+      <section id="job1" class="feature feature--eng" aria-labelledby="job1-title">
+      <div class="wrap feature__grid">
+        <div class="feature__side">
+          <span class="feature__num" aria-hidden="true">01</span>
+          <p class="feature__cat">Engineering</p>
+        </div>
+        <div class="feature__main">
+          <span class="feature__rule" aria-hidden="true"></span>
+          <h2 id="job1-title">Front-End Web <em>Developer</em></h2>
+          <p class="feature__lead">Build and improve the pages our customers use every day, from product
+        listings to checkout, with a focus on speed, accessibility and clean code.</p>
+          <dl class="feature__facts">
+            <div><dt>Reference number</dt><dd><span class="ref-number">SQF01</span></dd></div>
+        <div><dt>Salary</dt><dd>QAR 15,000 to QAR 22,000 per month (tax-free) plus allowances</dd></div>
+        <div><dt>Reports to</dt><dd>Head of Digital Engineering</dd></div>
+        <div><dt>Location and type</dt><dd>Doha, Qatar, full-time, hybrid</dd></div>
+          </dl>
+          <details class="feature__more" open>
+            <summary><span>Responsibilities and requirements</span><small></small><i aria-hidden="true"></i></summary>
+            <div class="feature__body">
+              <div class="feature__col">
+                <h3>Key responsibilities</h3>
+                <ul>
         <li>Build and maintain product listing, product detail and checkout pages using semantic HTML5 and CSS3</li>
         <li>Turn designers' wireframes into responsive pages for mobile, tablet and desktop</li>
         <li>Make sure every page meets web accessibility standards (WCAG)</li>
@@ -117,91 +188,175 @@
         <li>Manage code changes with Git and GitHub and review teammates' code</li>
         <li>Work with the security team to protect customer details entered in forms</li>
       </ul>
-
-      <h3>Requirements</h3>
-      <h4>Essential</h4>
-      <ul>
+              </div>
+              <div class="feature__col">
+                <h3>Requirements</h3>
+                <h4>Essential</h4>
+                <ul>
         <li>Degree in IT or computer science, or equivalent work experience</li>
         <li>At least 2 years of front-end development experience</li>
         <li>Strong skills in HTML5, CSS3 and responsive design</li>
         <li>Experience using Git for version control in a team</li>
       </ul>
-      <h4>Preferable</h4>
-      <ul>
+                <h4>Preferable</h4>
+                <ul>
         <li>Experience working on an e-commerce or online retail website</li>
         <li>Experience using Jira in an agile team</li>
         <li>An online portfolio or GitHub profile showing your work</li>
       </ul>
+              </div>
+            </div>
+          </details>
+          <p class="feature__apply"><a class="btn btn--gold" href="apply.html">Apply for this role <span aria-hidden="true">&rarr;</span></a> <a class="feature__switch" href="#job2">See the UX/UI Designer role <span aria-hidden="true">&rarr;</span></a> <a class="feature__close" href="#roles">Close details</a></p>
+        </div>
+      </div>
     </section>
 
-    <!-- Job 2: UX/UI Designer -->
-    <section id="job2" class="job" aria-labelledby="job2-title">
-      <h2 id="job2-title">UX/UI Designer</h2>
-
-      <dl class="job-details">
-        <dt>Reference number</dt>
-        <dd><span class="ref-number">SQU02</span></dd>
-        <dt>Salary</dt>
-        <dd>QAR 14,000 to QAR 20,000 per month (tax-free) plus allowances</dd>
-        <dt>Reports to</dt>
-        <dd>Product Design Lead</dd>
-        <dt>Location and type</dt>
-        <dd>Doha, Qatar, full-time, hybrid</dd>
-      </dl>
-
-      <p>
-        Shape how customers browse, search and buy on Souqi by researching their
-        needs and designing clear, inclusive shopping journeys.
-      </p>
-
-      <h3>Key responsibilities</h3>
-      <ul>
+      <section id="job2" class="feature feature--design" aria-labelledby="job2-title">
+      <div class="wrap feature__grid">
+        <div class="feature__side">
+          <span class="feature__num" aria-hidden="true">02</span>
+          <p class="feature__cat">Design &amp; UX</p>
+        </div>
+        <div class="feature__main">
+          <span class="feature__rule" aria-hidden="true"></span>
+          <h2 id="job2-title">UX/UI <em>Designer</em></h2>
+          <p class="feature__lead">Shape how customers browse, search and buy on Souqi by researching their
+        needs and designing clear, inclusive shopping journeys.</p>
+          <dl class="feature__facts">
+            <div><dt>Reference number</dt><dd><span class="ref-number">SQU02</span></dd></div>
+        <div><dt>Salary</dt><dd>QAR 14,000 to QAR 20,000 per month (tax-free) plus allowances</dd></div>
+        <div><dt>Reports to</dt><dd>Product Design Lead</dd></div>
+        <div><dt>Location and type</dt><dd>Doha, Qatar, full-time, hybrid</dd></div>
+          </dl>
+          <details class="feature__more" open>
+            <summary><span>Responsibilities and requirements</span><small></small><i aria-hidden="true"></i></summary>
+            <div class="feature__body">
+              <div class="feature__col">
+                <h3>Key responsibilities</h3>
+                <ul>
         <li>Research customer needs through interviews, surveys and usability testing</li>
         <li>Design wireframes and prototypes for browsing, search, cart and checkout</li>
         <li>Keep the colours, fonts and components of Souqi's design system consistent</li>
         <li>Check that designs meet accessibility standards, including colour contrast</li>
         <li>Work with developers so designs are built accurately</li>
       </ul>
-
-      <h3>Requirements</h3>
-      <h4>Essential</h4>
-      <ul>
+              </div>
+              <div class="feature__col">
+                <h3>Requirements</h3>
+                <h4>Essential</h4>
+                <ul>
         <li>Degree in design or a related field, or equivalent experience</li>
         <li>At least 2 years designing websites or apps</li>
         <li>Strong skills in Figma or a similar design tool</li>
         <li>A portfolio showing your design process, not only finished screens</li>
       </ul>
-      <h4>Preferable</h4>
-      <ul>
+                <h4>Preferable</h4>
+                <ul>
         <li>Experience designing for e-commerce or online retail</li>
         <li>Basic knowledge of HTML and CSS</li>
         <li>Experience designing for culturally and linguistically diverse customers</li>
       </ul>
+              </div>
+            </div>
+          </details>
+          <p class="feature__apply"><a class="btn btn--gold" href="apply.html">Apply for this role <span aria-hidden="true">&rarr;</span></a> <a class="feature__switch" href="#job1">See the Front-End Web Developer role <span aria-hidden="true">&rarr;</span></a> <a class="feature__close" href="#roles">Close details</a></p>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <section class="package" aria-labelledby="package-title">
+      <div class="wrap package__grid">
+        <div>
+          <p class="positions__label">The package</p>
+          <h2 id="package-title">What the role includes</h2>
+          <ul>
+        <li>Tax-free salary paid monthly in Qatari riyals (QAR)</li>
+        <li>Housing and transport allowance</li>
+        <li>Annual return flight home and end-of-service gratuity</li>
+        <li>Hybrid work: four days in our Doha office</li>
+        <li>Staff discount on Souqi orders</li>
+      </ul>
+        </div>
+        <div>
+          <h3>Inclusive employment</h3>
+          <p>
+        Souqi welcomes applicants of every background, nationality, gender and age.
+        Our customers come from many communities, and a team that reflects them helps
+        us build an online store that works for everyone.
+      </p>
+          <p>
+        We provide adjustments for applicants with disability. Tell us what support
+        you need when you apply.
+      </p>
+        </div>
+      </div>
     </section>
 
-    <!-- how to apply - used an ordered list since the steps go in order -->
-    <section class="jobs-howto" aria-labelledby="howto-title">
-      <h2 id="howto-title">How to apply</h2>
+    <section class="team-band" aria-labelledby="team-title">
+      <div class="wrap team-band__grid">
+        <div class="team-band__text">
+          <p class="positions__label">Our team</p>
+          <h2 id="team-title">Different backgrounds. <em>Same goal.</em></h2>
+          <p>We&rsquo;re a diverse team of problem solvers, creators and builders. Get to know the people behind Souqi.</p>
+          <a class="btn btn--outline-light" href="about.html">Meet the team <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="team-band__photo"><figure class="photo-slot photo-slot--wide photo-slot--framed">
+              <!-- PHOTO SLOT. To use a real photo, replace the placeholder div below with:
+                   <img src="images/jobs-team.jpg" alt="The Souqi team sharing lunch around a table" width="1200" height="750"> -->
+              <div class="photo-slot__media"><div class="photo-slot__frame"><span class="photo-slot__tag">Photo: images/jobs-team.jpg</span><p>The Souqi team gathered around one table, sharing lunch, relaxed and smiling.</p></div></div>
+              <figcaption>The team you would join.</figcaption>
+            </figure></div>
+      </div>
+    </section>
+
+    <section id="howto" class="jobs-howto" aria-labelledby="howto-title">
+      <div class="wrap" data-reveal>
+      <p class="kicker">How it works</p>
+      <h2 id="howto-title">How to <em>apply.</em></h2>
       <ol>
         <li>Note the reference number of the job you want.</li>
         <li>Go to the <a href="apply.html">application form</a> and enter that reference number.</li>
         <li>Fill in your details and select your skills.</li>
         <li>Submit your application. We reply to every applicant within 10 business days.</li>
       </ol>
+      <p><a class="btn btn--gold" href="apply.html">Start your application <span aria-hidden="true">&rarr;</span></a></p>
       <!-- inline CSS to make the closing date italic -->
       <p style="font-style: italic;">Applications for both roles close on 30 November 2026.</p>
+    </div>
     </section>
   </main>
 
-  <!-- footer (same as index.html) with Jira, GitHub and email links -->
-  <footer>
-    <ul>
-      <li><a href="https://YOUR-SITE.atlassian.net/jira/software/projects/SOUQI/boards">Jira project</a></li>
-      <li><a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-">GitHub repository</a></li>
-      <li><a href="mailto:souqi.careers@gmail.com">souqi.careers@gmail.com</a></li>
-    </ul>
-    <p>&copy; 2026 Souqi. Created for COS10026 Web Technology Project.</p>
+    <footer class="site-footer">
+    <div class="pattern-band" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--light" href="index.html" aria-label="Souqi, home"><img class="footer-logo" src="images/logo.png" width="170" height="168" alt=""></a>
+        <p>Good things happen when we build together.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About us</a>
+        <a href="apply.html">Apply</a>
+      </nav>
+      <div class="footer-col">
+        <h2>Say hello</h2>
+        <a href="mailto:info@souqi.com">info@souqi.com</a>
+        <!-- Replace these two links with your team's own Jira project and GitHub repository. -->
+        <a href="https://YOUR-SITE.atlassian.net/jira/software/projects/SOUQI/boards" target="_blank" rel="noopener noreferrer">Jira project <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; 2026 Souqi. A fictional company created for a university project.</p>
+      <a href="#main">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
   </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top"><span aria-hidden="true">&uarr;</span></a>
 
   <!--
     Acknowledgements

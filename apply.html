@@ -1,257 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for a role at Souqi, an online retail platform in Doha, Qatar.">
+  <title>Apply | Souqi</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apply for a job at Souqi">
-    <title>Apply | Souqi</title>
-
-    <link rel="icon" href="image.jpg" type="image/x-icon ">
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        legend {
-            font-weight: bold;
-        }
-    </style>
+  <!-- Embedded CSS example -->
+  <style>
+    legend { font-weight: 700; }
+  </style>
 </head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<body>
-
-    <!-- Header -->
-    <header>
-        <a href="index.html">
-            <img src="image.jpg" alt="Souqi Logo" width="40">
-            <h2>SOUQI</h2>
-        </a>
-
-        <!-- Navigation -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="about.html">About</a>
-            <a href="apply.html">Apply</a>
-        </nav>
-    </header>
-
-    <main>
-
-        <h1>Apply for a Role</h1>
-
-        <p>
-            Join the Souqi team! Enter the job reference number
-            from our <a href="jobs.html">Jobs page</a>
-            and complete the application form.
-        </p>
-
-        <p>All fields are required except Other Skills.</p>
-
-        <!-- Application Form -->
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php"
-              method="post">
-
-            <!-- Job Reference -->
-            <p>
-                <label for="ref">Job Reference Number:</label>
-                <input type="text" id="ref" name="ref"
-                       maxlength="5"
-                       pattern="[A-Za-z0-9]{5}"
-                       title="Enter exactly 5 letters or numbers"
-                       required>
-            </p>
-
-            <!-- Personal Information -->
-            <fieldset>
-                <legend>Personal Information</legend>
-
-                <p>
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname"
-                           name="firstname"
-                           maxlength="20"
-                           pattern="[A-Za-z]{1,20}"
-                           required>
-                </p>
-
-                <p>
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname"
-                           name="lastname"
-                           maxlength="20"
-                           pattern="[A-Za-z]{1,20}"
-                           required>
-                </p>
-
-                <p>
-                    <label for="dob">Date of Birth:</label>
-                    <input type="text" id="dob" name="dob"
-                           placeholder="dd/mm/yyyy"
-                           pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
-                           title="Use dd/mm/yyyy format"
-                           required>
-                </p>
-
-                <p>Gender:</p>
-
-                <p>
-                    <input type="radio" id="female"
-                           name="gender" value="female" required>
-                    <label for="female">Female</label>
-
-                    <input type="radio" id="male"
-                           name="gender" value="male">
-                    <label for="male">Male</label>
-
-                    <input type="radio" id="other"
-                           name="gender" value="other">
-                    <label for="other">Other</label>
-                </p>
-
-            </fieldset>
-
-            <!-- Address -->
-            <fieldset>
-                <legend>Address</legend>
-
-                <p>
-                    <label for="street">Street Address:</label>
-                    <input type="text" id="street" name="street"
-                           maxlength="40" required>
-                </p>
-
-                <p>
-                    <label for="suburb">Suburb/Town:</label>
-                    <input type="text" id="suburb" name="suburb"
-                           maxlength="40" required>
-                </p>
-
-                <p>
-                  <label for="state">State:</label>
-                    <select id="state" name="state" required>
-                        <option value="">Select State</option>
-                        <option value="DOha">Doha</option>
-                        <option value="AL Rayyan">AL Rayyan</option>
-                        <option value="Wakra">Wakra</option>
-                        <option value="Al Khor">Al Khor</option>
-                        <option value="Dukhan">Dukhan</option>
-                        <option value="AL Ruais">AL Ruais</option>
-                        <option value="Mesaied">Mesaied</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="postcode">Postcode:</label>
-                    <input type="text" id="postcode"
-                           name="postcode" maxlength="4"
-                           pattern="[0-9]{4}" required>
-                </p>
-
-            </fieldset>
-
-            <!-- Contact Details -->
-            <fieldset>
-                <legend>Contact Details</legend>
-
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email"
-                           name="email" required>
-                </p>
-
-                <p>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone"
-                           pattern="[0-9]{8,12}"
-                           title="Enter 8 to 12 digits"
-                           required>
-                </p>
-
-            </fieldset>
-
-            <!-- Skills -->
-            <fieldset>
-                <legend>Skills</legend>
-
-                <p>Select your skills:</p>
-
-                <input type="checkbox" id="html"
-                       name="skills" value="html">
-                <label for="html">HTML5</label>
-
-                <input type="checkbox" id="css"
-                       name="skills" value="css">
-                <label for="css">CSS3</label>
-
-                <input type="checkbox" id="git"
-                       name="skills" value="git">
-                <label for="git">Git</label>
-
-                <input type="checkbox" id="figma"
-                       name="skills" value="figma">
-                <label for="figma">Figma</label>
-
-                <input type="checkbox" id="accessibility"
-                       name="skills" value="accessibility">
-                <label for="accessibility">Accessibility</label>
-
-            </fieldset>
-
-            <!-- Other Skills -->
-            <p>
-                <label for="otherskills">Other Skills:</label>
-            </p>
-
-            <p>
-                <textarea id="otherskills" name="otherskills"
-                          rows="4" cols="40"></textarea>
-            </p>
-
-            <!-- Submit -->
-            <p>
-                <button type="submit">Submit Application</button>
-            </p>
-
-        </form>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-
-        <img src="image.jpg" alt="Souqi Logo" width="100">
-
-        <p>Good things happen when we build together.</p>
-
-        <h3>Explore</h3>
-
+  <header class="site-header">
+    <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Souqi, home">
+        <img class="brand-mark" src="images/logo-mark.png" width="34" height="38" alt="">
+        <span class="brand-name">SOUQI</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="jobs.html">Jobs</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="apply.html" aria-current="page">Apply <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="apply-title">
+      <div class="wrap">
+        <p class="kicker hero-in d1">Join Souqi</p>
+        <h1 id="apply-title" class="hero-in d2">Apply for a <em>role.</em></h1>
+        <p class="jobs-intro hero-in d3" style="max-width: 60ch;">Enter the reference number from our <a href="jobs.html">jobs page</a>, then fill in your details. All fields are required except Other skills.</p>
+      </div>
+    </section>
+    <div class="apply-body">
+      <div class="wrap">
+        <div class="apply-layout">
+          <div class="apply-side">
+            <figure class="photo-slot photo-slot--portrait photo-slot--framed">
+          <!-- PHOTO SLOT. To use a real photo, replace the placeholder div below with:
+               <img src="images/apply-side.jpg" alt="A confident graduate walking into a modern office" width="800" height="600"> -->
+          <div class="photo-slot__media"><div class="photo-slot__frame"><span class="photo-slot__tag">Photo: images/apply-side.jpg</span><p>A confident graduate in smart-casual clothes walking into a modern office building, looking ahead. Golden hour light.</p></div></div>
+          <figcaption>Your next chapter could start here.</figcaption>
+        </figure>
+            <p class="apply-side__note">We reply to every applicant within 10 business days.</p>
+          </div>
+        <div class="apply-card" data-reveal>
+          <div class="meter" aria-hidden="true"><span class="meter__label">Your progress</span><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i></div>
+          <div class="confetti" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <form class="application" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+      <div class="form-grid">
+        <p><label for="ref">Job reference number</label>
+          <input type="text" id="ref" name="ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers, e.g. SQF01" required></p>
+        <p><label for="dob">Date of birth</label>
+          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" title="Use the format dd/mm/yyyy" required></p>
+        <p><label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, maximum 20" autocomplete="given-name" required></p>
+        <p><label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, maximum 20" autocomplete="family-name" required></p>
+        <fieldset>
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="female" required> Female</label>
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </fieldset>
+        <p><label for="street">Street address</label>
+          <input type="text" id="street" name="street" maxlength="40" autocomplete="street-address" required></p>
+        <p><label for="suburb">Suburb/Town</label>
+          <input type="text" id="suburb" name="suburb" maxlength="40" required></p>
+        <p><label for="state">State</label>
+          <select id="state" name="state" required>
+            <option value="">Select a state</option>
+            <option>VIC</option><option>NSW</option><option>QLD</option><option>NT</option>
+            <option>WA</option><option>SA</option><option>TAS</option><option>ACT</option>
+          </select></p>
+        <p><label for="postcode">Postcode</label>
+          <input type="text" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}" title="Exactly 4 digits" inputmode="numeric" required></p>
+        <p><label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required></p>
+        <p><label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" title="8 to 12 digits, no spaces" required></p>
+      </div>
+      <fieldset>
+        <legend>Skills</legend>
+        <!-- first box required so at least HTML5 validation is triggered for the group -->
+        <label><input type="checkbox" name="skills" value="html" required> HTML5</label>
+        <label><input type="checkbox" name="skills" value="css"> CSS3</label>
+        <label><input type="checkbox" name="skills" value="git"> Git</label>
+        <label><input type="checkbox" name="skills" value="figma"> Figma</label>
+        <label><input type="checkbox" name="skills" value="accessibility"> Accessibility</label>
+      </fieldset>
+      <p><label for="otherskills">Other skills</label>
+        <textarea id="otherskills" name="otherskills" rows="4"></textarea></p>
+      <div class="submit-row">
+        <button type="submit" class="btn">Submit application <span aria-hidden="true">&rarr;</span></button>
+        <p class="ready-note" role="status">All set. Your application is ready to send.</p>
+      </div>
+    </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="pattern-band" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--light" href="index.html" aria-label="Souqi, home"><img class="footer-logo" src="images/logo.png" width="170" height="168" alt=""></a>
+        <p>Good things happen when we build together.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About us</a>
         <a href="apply.html">Apply</a>
+      </nav>
+      <div class="footer-col">
+        <h2>Say hello</h2>
+        <a href="mailto:info@souqi.com">info@souqi.com</a>
+        <!-- Replace these two links with your team's own Jira project and GitHub repository. -->
+        <a href="https://YOUR-SITE.atlassian.net/jira/software/projects/SOUQI/boards" target="_blank" rel="noopener noreferrer">Jira project <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; 2026 Souqi. A fictional company created for a university project.</p>
+      <a href="#main">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
 
-        <h3>Contact Us</h3>
-
-        <p>
-            <a href="mailto:info@souqi.com">info@souqi.com</a>
-        </p>
-
-        <p>
-            <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-">
-                GitHub Repository
-            </a>
-        </p>
-
-        <p>
-            &copy; 2026 Souqi.
-            A fictional company created for a university project.
-        </p>
-
-        <a href="#">Back to Top</a>
-
-    </footer>
-
-</body>
+  <a class="to-top" href="#top" aria-label="Back to top"><span aria-hidden="true">&uarr;</span></a></body>
 </html>

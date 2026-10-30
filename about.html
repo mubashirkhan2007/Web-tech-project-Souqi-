@@ -6,8 +6,11 @@
     <meta name="description" content="Meet the G05 student team behind the SOUQI recruitment website.">
     <meta name="author" content="G05">
     <title>About Us | SOUQI</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/about.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
     <!-- Embedded CSS example required by the assignment. -->
     <style>
@@ -16,30 +19,44 @@
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1 class="logo">SOUQI</h1>
-            <p class="tagline">YOUR MARKET, REFINED.</p>
-            <nav aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="jobs.html">Jobs</a>
-                <a href="apply.html">Apply</a>
-                <a href="about.html" aria-current="page">About</a>
-            </nav>
+<body id="top">
+      <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Souqi, home">
+        <img class="brand-mark" src="images/logo-mark.png" width="34" height="38" alt="">
+        <span class="brand-name">SOUQI</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a class="nav-cta" href="apply.html">Apply <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+    <main id="main">
+    <section class="page-hero" aria-labelledby="about-heading">
+      <div class="wrap page-hero__split">
+        <div class="page-hero__text">
+        <p class="kicker hero-in d1">The people behind Souqi</p>
+        <h1 id="about-heading" class="hero-in d2">About our <em>team.</em></h1>
+        <p class="jobs-intro hero-in d3">We are Group G05, the student team developing SOUQI, a fictional online retail platform and recruitment website. Our goal is to build a clear, welcoming and accessible website using HTML5 and CSS3.</p>
+        <!-- Inline CSS example required by the assignment. -->
+        <p class="jobs-intro hero-in d4" style="font-weight: bold;">Together, we bring our ideas into one website.</p>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="intro">
-            <p class="eyebrow">THE PEOPLE BEHIND SOUQI</p>
-            <h2 id="about-heading">About Our Team</h2>
-            <p>We are Group G05, the student team developing SOUQI, a fictional online retail platform and recruitment website. Our goal is to build a clear, welcoming and accessible website using HTML5 and CSS3.</p>
-            <!-- Inline CSS example required by the assignment. -->
-            <p style="font-weight: bold;">Together, we bring our ideas into one website.</p>
-        </section>
-
-        <section class="group-details">
+        <figure class="photo-slot photo-slot--landscape photo-slot--framed">
+          <div class="photo-slot__media"><img src="images/souq-market-hero.png" alt="A lantern-lit souq street lined with rugs and brass lamps" width="692" height="401"></div>
+          <figcaption>The souq: where our name comes from.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="about-body">
+      <div class="wrap">
+        <section class="about-sec group-details" data-reveal>
             <h2>Group Details</h2>
             <ul>
                 <li>Group: G05
@@ -50,44 +67,44 @@
                 </li>
                 <li>Unit: COS10026 Web Technology</li>
             </ul>
+            <figure class="photo-slot photo-slot--landscape photo-slot--framed">
+          <!-- PHOTO SLOT. To use a real photo, replace the placeholder div below with:
+               <img src="images/about-team-work.jpg" alt="Four students working together on a website design" width="800" height="600"> -->
+          <div class="photo-slot__media"><div class="photo-slot__frame"><span class="photo-slot__tag">Photo: images/about-team-work.jpg</span><p>Four students gathered around a laptop with wireframes sketched on a whiteboard behind them. Coffee cups on the table.</p></div></div>
+          <figcaption>The team planning the Souqi site.</figcaption>
+        </figure>
         </section>
-
-        <section class="team-section">
+        <section class="about-sec team-section">
             <h2>Meet the Team</h2>
             <p>Each member has a responsibility in designing and developing the website.</p>
             <dl class="team-list">
-                <dt>Manahil Baig <span class="student-id">ID: 106223913</span></dt>
+                <div class="member" data-reveal><dt>Manahil Baig <span class="student-id">ID: 106223913</span></dt>
                 <dd><strong>Contribution:</strong> Overall branding, website design and About page.</dd>
                 <dd><strong>Quote (first language):</strong> [Original quote]</dd>
-                <dd><strong>English translation:</strong> [Translated quote]</dd>
-
-                <dt>Hussien Nafee <span class="student-id">ID: 106210290</span></dt>
+                <dd><strong>English translation:</strong> [Translated quote]</dd></div>
+                <div class="member" data-reveal><dt>Hussien Nafee <span class="student-id">ID: 106210290</span></dt>
                 <dd><strong>Contribution:</strong> [Assigned page and tasks]</dd>
                 <dd><strong>Quote (first language):</strong> [Original quote]</dd>
-                <dd><strong>English translation:</strong> [Translated quote]</dd>
-
-                <dt>Mubashir Khan <span class="student-id">ID: [Student ID]</span></dt>
+                <dd><strong>English translation:</strong> [Translated quote]</dd></div>
+                <div class="member" data-reveal><dt>Mubashir Khan <span class="student-id">ID: [Student ID]</span></dt>
                 <dd><strong>Contribution:</strong> [Assigned page and tasks]</dd>
                 <dd><strong>Quote (first language):</strong> [Original quote]</dd>
-                <dd><strong>English translation:</strong> [Translated quote]</dd>
-
-                <dt>Minna Albadri <span class="student-id">ID: [Student ID]</span></dt>
+                <dd><strong>English translation:</strong> [Translated quote]</dd></div>
+                <div class="member" data-reveal><dt>Minna Albadri <span class="student-id">ID: [Student ID]</span></dt>
                 <dd><strong>Contribution:</strong> [Assigned page and tasks]</dd>
                 <dd><strong>Quote (first language):</strong> [Original quote]</dd>
-                <dd><strong>English translation:</strong> [Translated quote]</dd>
+                <dd><strong>English translation:</strong> [Translated quote]</dd></div>
             </dl>
         </section>
-
-        <section class="photo-section">
+        <section class="about-sec photo-section" data-reveal>
             <h2>Our Group Photo</h2>
-            <figure>
+            <figure class="photo-frame">
                 <!-- Replace this path with your actual group photo, saved under 300 KB. -->
                 <img src="images/group-photo.jpg" alt="Members of Group G05 standing together for a group photo" width="700" height="400">
                 <figcaption>Group G05 — the team behind the SOUQI website.</figcaption>
             </figure>
         </section>
-
-        <section class="facts-section">
+        <section class="about-sec facts-section" data-reveal>
             <h2>Fun Facts About Us</h2>
             <div class="table-wrap">
                 <table>
@@ -109,18 +126,41 @@
                 </table>
             </div>
         </section>
-
-        <section class="acknowledgement">
+        <section class="about-sec acknowledgement" data-reveal>
             <h2>Respect and Inclusion</h2>
             <p>As students studying an Australian university course, we acknowledge Aboriginal and Torres Strait Islander peoples as the First Peoples of Australia. We recognise their continuing connections to Country, cultures and communities, and the importance of respect and inclusion in education and workplaces.</p>
         </section>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 SOUQI | COS10026 Group G05</p>
-            <p><a href="mailto:info@souqi.example">Contact</a> | <a href="index.html">Home</a></p>
-        </div>
-    </footer>
-</body>
+      <footer class="site-footer">
+    <div class="pattern-band" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--light" href="index.html" aria-label="Souqi, home"><img class="footer-logo" src="images/logo.png" width="170" height="168" alt=""></a>
+        <p>Good things happen when we build together.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About us</a>
+        <a href="apply.html">Apply</a>
+      </nav>
+      <div class="footer-col">
+        <h2>Say hello</h2>
+        <a href="mailto:info@souqi.com">info@souqi.com</a>
+        <!-- Replace these two links with your team's own Jira project and GitHub repository. -->
+        <a href="https://YOUR-SITE.atlassian.net/jira/software/projects/SOUQI/boards" target="_blank" rel="noopener noreferrer">Jira project <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; 2026 Souqi. A fictional company created for a university project.</p>
+      <a href="#main">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top"><span aria-hidden="true">&uarr;</span></a></body>
 </html>

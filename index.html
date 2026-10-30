@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Careers at Souqi, a modern online marketplace inspired by the souqs of Qatar. See open roles in engineering, design and product analytics.">
+  <title>Souqi Careers | More than just a marketplace</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Page-specific embedded style (assignment requirement): a dotted lattice behind the hero photograph, made with CSS only. -->
+  <style>
+    .hero-lattice {
+      background-image: radial-gradient(circle, rgba(233, 217, 184, .5) 1.3px, transparent 1.6px);
+      background-size: 15px 15px;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Souqi, home">
+        <img class="brand-mark" src="images/logo-mark.png" width="34" height="38" alt="">
+        <span class="brand-name">SOUQI</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="apply.html">Apply <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-photo-wrap"><img class="hero-photo" src="images/souq-market-hero.png" width="692" height="401" alt="A sunlit souq street in the late morning. Shoppers walk between stalls hung with woven rugs, brass lanterns and handmade goods under a canopy of reed shade."></div>
+        <div class="hero-lattice" aria-hidden="true"></div>
+        <div class="hero-dust" aria-hidden="true"></div>
+        <p class="hero-hint hero-in dv9" aria-hidden="true"><span class="hero-hint-dot"></span>Hover the glowing dots to explore the souq</p>
+        <!-- Interactive pins on the photo: hover or focus a pin to read about it (CSS only) -->
+        <ul class="hotspots" aria-label="Details from the photo">
+          <li class="hotspot hs-1"><button class="hotspot-btn" type="button" aria-describedby="hs1"><span class="visually-hidden">Brass lanterns</span></button><span class="hotspot-tip" id="hs1" role="tooltip"><strong>Brass lanterns</strong>Hung by hand above every stall.</span></li>
+          <li class="hotspot hs-2"><button class="hotspot-btn" type="button" aria-describedby="hs2"><span class="visually-hidden">Woven rugs</span></button><span class="hotspot-tip" id="hs2" role="tooltip"><strong>Woven rugs</strong>Every pattern has a maker behind it.</span></li>
+          <li class="hotspot hs-3"><button class="hotspot-btn" type="button" aria-describedby="hs3"><span class="visually-hidden">The street</span></button><span class="hotspot-tip" id="hs3" role="tooltip"><strong>The street</strong>Where shoppers and sellers swap stories.</span></li>
+        </ul>
+        <div class="wrap">
+          <div class="hero-copy">
+            <p class="kicker hero-in dv1">Qatar <span aria-hidden="true">&middot;</span> Opportunity <span aria-hidden="true">&middot;</span> Community</p>
+            <h1 id="hero-title"><span class="line"><span>Where bold</span></span> <span class="line"><span>ideas meet</span></span> <span class="line"><span><em>brilliant people.</em></span></span></h1>
+            <p class="hero-sub hero-in dv75">Real people. Great products.<br>A bigger tomorrow.</p>
+            <div class="hero-actions hero-in dv9">
+              <a class="btn btn--gold" href="jobs.html">Explore opportunities</a>
+              <a class="text-link text-link--light" href="about.html">Get to know us <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dock-wrap">
+        <div class="wrap">
+          <div class="hero-dock" data-reveal>
+            <form class="dock-search" action="jobs.html" method="get" role="search">
+              <label for="search">Find your place at Souqi</label>
+              <div class="dock-search-row">
+                <input type="search" id="search" name="q" placeholder="Search a role or skill, e.g. UX designer">
+                <button class="btn btn--gold" type="submit">Search</button>
+              </div>
+              <p class="dock-chips"><a href="jobs.html#job1">Engineering</a><a href="jobs.html#job2">Design &amp; UX</a><a href="jobs.html">All roles</a></p>
+            </form>
+            <dl class="dock-stats">
+              <div><dd><span class="dock-num dn-2"></span></dd><dt>Open roles</dt></div>
+              <div><dd><span class="dock-num dn-3"></span></dd><dt>Teams</dt></div>
+              <div><dd><span class="dock-num dn-10"></span></dd><dt>Days to reply</dt></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values ticker -->
+    <section class="ticker" aria-label="What we care about">
+      <div class="ticker-track" id="ticker-track">
+        <ul class="ticker-list">
+          <li>Real people</li><li>Great products</li><li>A bigger tomorrow</li><li>Stay curious</li><li>Make it useful</li><li>Be a good human</li>
+        </ul>
+        <ul class="ticker-list" aria-hidden="true">
+          <li>Real people</li><li>Great products</li><li>A bigger tomorrow</li><li>Stay curious</li><li>Make it useful</li><li>Be a good human</li>
+        </ul>
+      </div>
+      <input class="ticker-check" type="checkbox" id="ticker-pause">
+      <label class="ticker-toggle" for="ticker-pause"><span class="ticker-toggle__icon" aria-hidden="true"></span><span class="visually-hidden">Pause scrolling text</span></label>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <figure class="about-photo" data-reveal="clip">
+          <div class="about-img"><img src="images/souq-market-hero.png" width="692" height="401" alt="Close view of rugs, brass pots and lanterns on a souq stall."></div>
+          <figcaption>Where we start: the stall, the shopper and the conversation between them.</figcaption>
+        </figure>
+        <div class="about-copy">
+          <p class="kicker" data-reveal>About Souqi</p>
+          <h2 id="about-title" data-reveal style="--d:.1s">Good things start with <em>good people.</em></h2>
+          <p class="lead dv2" data-reveal>We&rsquo;re building a more thoughtful way to shop online, bringing people and good finds a little closer together.</p>
+          <div class="about-cols dv3" data-reveal>
+            <p>In a traditional souq, the seller knows the goods and the shopper knows what they&rsquo;re hoping to find. The best part is the conversation in between. Souqi is our attempt to keep that conversation going on a screen.</p>
+            <p>That starts with the team behind it. We like curious minds, honest questions and people who care about getting the small details right.</p>
+          </div>
+          <a class="text-link" href="about.html">Explore more about us <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VALUES -->
+    <section class="values" id="values" aria-labelledby="values-title">
+      <div class="pattern-band" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="values-head" data-reveal>
+          <h2 id="values-title">Bring your ideas.<br><em>Keep your point of view.</em></h2>
+          <p>There isn&rsquo;t one kind of person who does great work. We&rsquo;re better because people bring different ways of seeing things.</p>
+        </div>
+        <div class="values-tabs dv15" data-reveal>
+          <fieldset class="vgroup">
+            <legend class="visually-hidden">Choose a value to read about it</legend>
+            <input class="vradio" type="radio" name="value" id="v1" checked>
+            <input class="vradio" type="radio" name="value" id="v2">
+            <input class="vradio" type="radio" name="value" id="v3">
+            <div class="vtab-list">
+              <label class="vtab" for="v1"><span class="v-num">i.</span><span class="vtab-title">Stay curious</span></label>
+              <label class="vtab" for="v2"><span class="v-num">ii.</span><span class="vtab-title">Make it useful</span></label>
+              <label class="vtab" for="v3"><span class="v-num">iii.</span><span class="vtab-title">Be a good human</span></label>
+            </div>
+            <div class="vpanels">
+              <div class="vpanel">
+                <p class="vpanel-statement">Ask the extra question. Try a new route. Be open to changing your mind.</p>
+                <p class="vpanel-example"><b>What it looks like</b> A designer sits in on a customer call. An engineer asks the analyst what the numbers don&rsquo;t show.</p>
+              </div>
+              <div class="vpanel">
+                <p class="vpanel-statement">Good ideas matter most when they make something better for someone.</p>
+                <p class="vpanel-example"><b>What it looks like</b> We ship the small fix that saves a seller ten minutes before the big feature nobody asked for.</p>
+              </div>
+              <div class="vpanel">
+                <p class="vpanel-statement">Give credit, share what you know, and treat people with care.</p>
+                <p class="vpanel-example"><b>What it looks like</b> Reviews are kind and specific. Wins get named. Questions never cost you respect.</p>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 HOW IDEAS MOVE: a CSS-only editorial journey between values and teams -->
+
+    <!-- 4. TEAMS / HIRING CATEGORIES -->
+    <section class="teams" id="teams" aria-labelledby="teams-title">
+      <div class="wrap">
+        <div class="teams-head" data-reveal>
+          <h2 id="teams-title">Three teams, <em>one market.</em></h2>
+          <p>Wherever you fit, you&rsquo;ll be working on the same thing: making online shopping feel more human.</p>
+        </div>
+        <div class="teams-row">
+          <article class="team team--navy dv01" data-reveal>
+            <h3>Engineering</h3>
+            <p>Front-end and platform work for a fast, accessible storefront.</p>
+            <a href="jobs.html">2 roles <span aria-hidden="true">&rarr;</span><span class="visually-hidden"> in Engineering</span></a>
+          </article>
+          <article class="team team--plum dv02" data-reveal>
+            <h3>Design &amp; UX</h3>
+            <p>Research, flows and interfaces that make browsing feel natural.</p>
+            <a href="jobs.html">1 role <span aria-hidden="true">&rarr;</span><span class="visually-hidden"> in Design and UX</span></a>
+          </article>
+          <article class="team team--maroon dv03" data-reveal>
+            <h3>Product &amp; Analytics</h3>
+            <p>Finding the insight in the data and deciding what we build next.</p>
+            <a href="jobs.html">1 role <span aria-hidden="true">&rarr;</span><span class="visually-hidden"> in Product and Analytics</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. JOBS -->
+    <section class="jobs" id="jobs" aria-labelledby="jobs-title">
+      <div class="wrap jobs-grid">
+        <div class="jobs-side" data-reveal>
+          <p class="kicker">Open roles</p>
+          <h2 id="jobs-title">Roles we&rsquo;re hiring for.</h2>
+          <p>Two positions are open in our Doha office. Both are full-time and hybrid.</p>
+        </div>
+        <div>
+          <ul class="home-roles">
+            <li data-reveal><h3>Front-End Web Developer</h3><p>Ref SQF01 &middot; Engineering &middot; Doha, hybrid</p></li>
+            <li data-reveal style="--d:.1s"><h3>UX/UI Designer</h3><p>Ref SQU02 &middot; Design and UX &middot; Doha, hybrid</p></li>
+          </ul>
+          <a class="btn" href="jobs.html">Explore all roles <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY FORM -->
+    <section class="apply" id="apply" aria-labelledby="apply-title">
+      <div class="wrap apply-intro" data-reveal>
+        <p class="kicker">Apply to Souqi</p>
+        <h2 id="apply-title">Ready to <em>join us?</em></h2>
+        <p>Pick a job reference number, fill in one short form and tell us about your skills. We reply to every applicant within 10 business days.</p>
+        <p><a class="btn btn--gold" href="apply.html">Start your application <span aria-hidden="true">&rarr;</span></a></p>
+      </div>
+    </section>
+
+    <section class="ack" id="acknowledgement" aria-labelledby="ack-title">
+      <div class="wrap ack-grid" data-reveal>
+        <div>
+          <p class="kicker">Respecting the place we work</p>
+          <h2 id="ack-title">First Nations acknowledgement</h2>
+        </div>
+        <div class="ack-text">
+          <p>We acknowledge the Traditional Custodians of the lands on which we learn, work and create, and pay our respects to Elders past and present. We recognise the continuing connection of Aboriginal and Torres Strait Islander peoples to Country, culture and community.</p>
+          <!-- Inline style attribute (assignment requirement). -->
+          <p class="ack-why" style="font-size: 0.9rem;"><strong>Why this is here:</strong> A marketplace connects people from different places and backgrounds. This acknowledgement is a reminder to respect the histories, communities and perspectives that shape the places where we live and work.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="pattern-band" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--light" href="index.html" aria-label="Souqi, home"><img class="footer-logo" src="images/logo.png" width="170" height="168" alt=""></a>
+        <p>Good things happen when we build together.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About us</a>
+        <a href="apply.html">Apply</a>
+      </nav>
+      <div class="footer-col">
+        <h2>Say hello</h2>
+        <a href="mailto:info@souqi.com">info@souqi.com</a>
+        <!-- Replace these two links with your team's own Jira project and GitHub repository. -->
+        <a href="https://YOUR-SITE.atlassian.net/jira/software/projects/SOUQI/boards" target="_blank" rel="noopener noreferrer">Jira project <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; 2026 Souqi. A fictional company created for a university project.</p>
+      <a href="#main">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#home" aria-label="Back to top"><span aria-hidden="true">&uarr;</span></a>
+
+</body>
+</html>
