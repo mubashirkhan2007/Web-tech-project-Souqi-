@@ -29,7 +29,7 @@ Souqi is a fictional online retail platform hiring for its technical and user ex
 | Hussein | Apply page and form |
 | Manahil | About page and branding |
 | Minna | Jobs page |
-| Abdur Rahman | Jira, styles.css, QA |
+| Abdur Rahman | Jira |
 
 ## Run locally
 
