@@ -1,272 +1,295 @@
-/*
-filename: styles.css
-author: Mubashir, Hussein, Manahil, Minna, Abdur Rahman
-created: 21/10/2026
-last modified: 27/10/2026
-description: Shared stylesheet for index.html, jobs.html, apply.html, about.html
-*/
-
-/* SOUQI — shared branding and layout for all 4 pages */
-/* Typography: elegant editorial logo, clear modern headings and readable body text */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap');
-
-:root {
-    --blue: #1F3A5F;
-    --gold: #B08A3C;
-    --plum: #6B4C7A;
-    --maroon: #7A3E3A;
-    --ivory: #F7F3EC;
-    --text: #2D2A26;
-    --muted: #746E68;
-    --border: #DDD4C7;
-    --white: #FFFFFF;
+/* SOUQI - jobs.css */
+#job2 {
+  border-top-color: var(--plum);
+}
+.ref-number {
+  display: inline-block;
+  background: var(--navy-deep);
+  color: var(--gold-soft);
+  border: 0;
+  border-radius: 2px;
+  padding: .28rem .55rem;
+  letter-spacing: .08em;
+}
+.package {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: linear-gradient(180deg, var(--sand), var(--ivory-deep));
+}
+.package__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem clamp(2rem, 6vw, 5rem);
+}
+.package h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+.package h3 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+}
+.package ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.package li {
+  position: relative;
+  margin-bottom: .75rem;
+  padding-left: 1.6rem;
+}
+.package li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .8em;
+  width: .7rem;
+  height: 2px;
+  background: var(--gold);
+}
+@media (max-width: 900px) {
+  .package__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.jobs-top {
+  padding: clamp(2rem, 4vw, 3rem) 0 2rem;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--border);
+}
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+.jobs-table caption {
+  padding: .6rem 0;
+  font-weight: 700;
+  text-align: left;
+  color: var(--plum);
+}
+.jobs-table th, .jobs-table td {
+  padding: .8rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.jobs-table thead th {
+  background: var(--navy);
+  color: var(--white);
+}
+.jobs-table tbody th a {
+  color: var(--navy);
+  font-weight: 700;
+}
+.jobs-list {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+.jobs-list .wrap {
+  display: grid;
+  gap: 2rem;
+}
+.opening {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--navy);
+  border-radius: var(--radius);
+  scroll-margin-top: 6rem;
+}
+.opening:nth-child(2) {
+  border-top-color: var(--plum);
+}
+.opening__cat {
+  margin: 0 0 .3rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--maroon);
+}
+.opening h2 {
+  margin: 0 0 .75rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--navy);
+}
+.opening__lead {
+  max-width: 46rem;
+}
+.opening__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem 2rem;
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--ivory);
+  border-left: 4px solid var(--gold);
+}
+.opening__facts dt {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.opening__facts dd {
+  margin: 0;
+}
+.opening__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.opening h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.3rem;
+  color: var(--navy);
+}
+.opening h4 {
+  margin: 1rem 0 .3rem;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--maroon);
+}
+.opening ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.opening li {
+  margin-bottom: .35rem;
+}
+.jobs-plain .package, .howto-plain {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+.jobs-plain .package {
+  background: var(--sand);
+}
+.jobs-plain .package__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+.jobs-plain .package h2, .howto-plain h2 {
+  color: var(--navy);
+}
+.howto-plain ol {
+  max-width: 46rem;
+  padding-left: 1.2rem;
+}
+@media (max-width: 800px) {
+  .opening__facts, .opening__cols, .jobs-plain .package__grid {
+    grid-template-columns: 1fr;
+  }
+  .jobs-table {
+    font-size: .9rem;
+  }
+  .jobs-table th, .jobs-table td {
+    padding: .6rem;
+  }
+}
+.table-scroll {
+  overflow-x: auto;
+}
+.howto-plain {
+  background: var(--navy-deep);
+  color: var(--ivory);
+}
+.howto-plain h2 {
+  color: var(--ivory);
+}
+.howto-plain ol {
+  display: block;
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+.howto-plain li {
+  padding-top: 0;
+  margin-bottom: .4rem;
+  color: var(--ivory);
+}
+.howto-plain li::before {
+  content: none;
+}
+.howto-plain a:not(.btn) {
+  color: var(--gold-soft);
+}
+.howto-plain h2 {
+  margin-bottom: 1rem;
+}
+.howto-plain .wrap {
+  padding-block: 0;
+}
+.howto-plain {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+.howto-plain p {
+  margin: 1rem 0;
+}
+.opening {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.opening__facts {
+  border-radius: var(--radius);
+}
+.package {
+  margin-inline: clamp(.5rem, 1.5vw, 1.25rem);
+  border-radius: var(--radius-xl);
+}
+.howto-plain {
+  margin-inline: clamp(.5rem, 1.5vw, 1.25rem);
+  border-radius: var(--radius-xl);
+}
+.jobs-top {
+  border-bottom: 0;
+}
+.jobs-table caption {
+  padding: 1rem 1.25rem .8rem;
+}
+.opening {
+  border: 2px solid var(--navy);
+}
+#job2 {
+  border-color: var(--plum);
+}
+.opening__facts {
+  border: 1px solid var(--border);
+}
+.package, .howto-plain {
+  margin: var(--gap);
 }
 
-* {
-    box-sizing: border-box;
+/* aside floated to the right at 25% width with margin, padding and border.
+   the benefits area is a normal block here (not a grid) so the float works,
+   and overflow: hidden makes it contain the floated aside */
+.jobs-plain .package__grid {
+  display: block;
+  overflow: hidden;
 }
-
-body {
-    margin: 0;
-    background-color: var(--ivory);
-    color: var(--text);
-    font-family: 'DM Sans', 'Segoe UI', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.container {
-    width: 90%;
-    max-width: 1120px;
-    margin: 0 auto;
-}
-
-/* Shared header and navigation */
-header {
-    background-color: var(--blue);
-    color: var(--white);
-    border-bottom: 4px solid var(--gold);
-    padding: 25px 0 18px;
-}
-
-.logo {
-    font-family: 'Marcellus', Georgia, serif;
-    font-size: 42px;
-    font-weight: normal;
-    letter-spacing: 5px;
-    line-height: 1.2;
-    margin: 0;
-}
-
-.tagline {
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    color: #E5C993;
-    margin: 4px 0 22px;
-}
-
-/* removes bullets and indents when the nav or footer links are in a list */
-nav ul,
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li,
-footer li {
-    display: inline;
-}
-
-nav a {
-    display: inline-block;
-    padding: 7px 12px;
-    margin: 0 9px 4px 0;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-}
-
-nav a:hover,
-nav a[aria-current="page"] {
-    color: #F4DEB5;
-    border-bottom-color: #E5C993;
-}
-
-a:focus-visible, button:focus-visible, input:focus-visible {
-    outline: 3px solid var(--gold);
-    outline-offset: 3px;
-}
-
-/* Shared headings, sections, and links */
-main {
-    padding-top: 38px;
-    padding-bottom: 55px;
-}
-
-h1, h2, h3 {
-    font-family: 'Manrope', 'Segoe UI', sans-serif;
-    line-height: 1.3;
-}
-
-h2 {
-    margin-top: 0;
-    font-size: 27px;
-    color: var(--blue);
-    letter-spacing: -0.5px;
-}
-
-section {
-    background-color: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 29px;
-    margin-bottom: 24px;
-}
-
-p { margin-top: 0; }
-
-main a { color: var(--blue); }
-main a:hover { color: var(--maroon); }
-
-/* Shared button rules for group teammates */
-.button {
-    display: inline-block;
-    background-color: var(--maroon);
-    color: #FFFFFF;
-    border: 2px solid var(--maroon);
-    border-radius: 6px;
-    padding: 10px 22px;
-    font-weight: 700;
-    text-decoration: none;
-}
-.button:hover {
-    background-color: var(--blue);
-    border-color: var(--blue);
-    color: #FFFFFF;
-}
-
-footer {
-    padding: 29px 0;
-    background-color: var(--blue);
-    color: white;
-    border-top: 4px solid var(--gold);
-    text-align: center;
-}
-footer p { margin: 5px 0; }
-footer a { color: #F4DEB5; margin: 0 8px; }
-footer a:hover { color: #FFFFFF; }
-
-@media (max-width: 600px) {
-    .logo { font-size: 34px; }
-    section { padding: 19px; }
-    h2 { font-size: 23px; }
-    nav a { margin-right: 4px; padding: 6px 8px; }
-}
-
-/* =====================================================================
-   JOBS PAGE (jobs.html) - Minna
-   These classes are only used on jobs.html. Colours use the shared
-   Souqi variables at the top of this file (blue, gold, ivory, border).
-   ===================================================================== */
-
-/* overflow: hidden stops the footer wrapping around the floated aside */
-.jobs-page {
-    overflow: hidden;
-}
-
-/* page heading in the Souqi blue, like the h2 headings */
-.jobs-page h1 {
-    color: var(--blue);
-    font-size: 36px;
-    margin-top: 0;
-}
-
-/* intro text a bit bigger than normal text */
-.jobs-intro {
-    font-size: 18px;
-    max-width: 700px;
-}
-
-/* aside floated to the right at 25% width with margin, padding and border */
 .jobs-aside {
-    float: right;
-    width: 25%;
-    margin: 0 0 24px 32px;
-    padding: 20px 22px;
-    border: 2px solid var(--gold);
-    border-radius: 12px;
-    background-color: var(--white);
+  float: right;
+  width: 25%;
+  margin: 0 0 1.5rem 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  background-color: var(--paper);
 }
-
-/* smaller aside heading with no extra space above it */
-.jobs-aside h2 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-/* line to split the benefits from the inclusive employment part */
 .jobs-aside h3 {
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    font-size: 17px;
+  font-size: 1.4rem;
 }
-
-/* overflow: hidden keeps each job box next to the aside instead of going under it */
-.job {
-    overflow: hidden;
-}
-
-/* gold border when the mouse is over a job, so it's clear which job you're reading */
-.job:hover {
-    border-color: var(--gold);
-    background-color: #FCFAF6;
-}
-
-/* child selector for the Essential and Preferable headings in each job */
-.job > h4 {
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-    color: var(--maroon);
-}
-
-/* box for the job details */
-.job-details {
-    padding: 12px 16px;
-    background-color: var(--ivory);
-    border-left: 5px solid var(--gold);
-}
-
-.job-details dt {
-    font-weight: bold;
-    color: var(--blue);
-}
-
-.job-details dd {
-    margin: 0 0 8px 0;
-}
-
-/* attribute selector - makes the links that jump to each job bold */
-.jobs-page a[href*="#"] {
-    font-weight: bold;
-}
-
-/* space between the how to apply steps */
-.jobs-howto li {
-    margin-bottom: 6px;
+.jobs-aside p {
+  margin: 0 0 .75rem;
 }
 
 /* on screens 768px or smaller the aside stops floating and goes
    full width, because 25% is too narrow to read on a phone */
 @media only screen and (max-width: 768px) {
-    .jobs-aside {
-        float: none;
-        width: auto;
-        margin: 0 0 24px 0;
-    }
+  .jobs-aside {
+    float: none;
+    width: auto;
+    margin: 0 0 1.5rem 0;
+  }
 }
-/* ===================== END JOBS PAGE ===================== */
