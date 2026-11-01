@@ -1,4 +1,11 @@
 /* SOUQI - jobs.css */
+   /*
+   filename: jobs.css
+   author: Minna Albadri
+   created: 21/10/2026
+   last modified: 01/11/2026
+   description: styles for jobs.html only (job cards, table, aside, how to apply)
+   */
 #job2 {
   border-top-color: var(--plum);
 }
