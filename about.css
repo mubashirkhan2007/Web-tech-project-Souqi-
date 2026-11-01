@@ -334,9 +334,6 @@
 .photo-frame, .photo-section figure {
   overflow: hidden;
 }
-.about-sec {
-  border: 1px solid var(--border);
-}
 .member {
   border: 2px solid var(--member-accent, var(--navy));
 }
