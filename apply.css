@@ -1,0 +1,300 @@
+/* SOUQI - apply.css */
+.apply-body {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.apply-card {
+  position: relative;
+  max-width: 54rem;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  overflow: hidden;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--gold);
+  border-radius: var(--radius);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.5rem;
+}
+.application p {
+  margin: 0 0 1rem;
+}
+.application label {
+  display: block;
+  margin-bottom: .35rem;
+  font-weight: 500;
+}
+.application input[type="text"], .application input[type="email"], .application input[type="tel"], .application select, .application textarea {
+  width: 100%;
+  padding: .8rem .9rem;
+  font: inherit;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.application input:focus-visible, .application select:focus-visible, .application textarea:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+.application input:user-valid, .application select:user-valid {
+  border-color: #2e7d4f;
+}
+.application input:user-invalid, .application select:user-invalid {
+  border-color: var(--maroon);
+}
+.application fieldset {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.application fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin: 0 1.25rem 0 0;
+  font-weight: 400;
+}
+.submit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.submit-row .btn {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+}
+.ready-note {
+  display: none;
+  margin: 0;
+  font-weight: 700;
+  color: #2e7d4f;
+}
+.application:valid .ready-note {
+  display: block;
+}
+.application:valid .btn {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-deep);
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.apply-card {
+  border-radius: calc(var(--radius) + 2px);
+}
+.apply-card {
+  border-top: 4px solid var(--gold);
+}
+.application label {
+  letter-spacing: .01em;
+}
+.application input:hover, .application select:hover, .application textarea:hover {
+  border-color: var(--gold);
+}
+.application input:focus, .application select:focus, .application textarea:focus {
+  border-color: var(--gold);
+  background-color: #fff;
+}
+.application input:focus-visible, .application select:focus-visible, .application textarea:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+.application input:user-invalid, .application select:user-invalid, .application textarea:user-invalid {
+  background-color: #fbf3f1;
+}
+.application input[type="checkbox"], .application input[type="radio"] {
+  accent-color: var(--navy);
+  width: 1.05rem;
+  height: 1.05rem;
+}
+.application fieldset:hover, .application fieldset:focus-within {
+  border-color: var(--gold);
+}
+.application legend {
+  padding: 0 .5rem;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--navy);
+}
+.submit-row .btn {
+  padding: .95rem 2rem;
+}
+.submit-row .btn:hover {
+  translate: 0 -2px;
+}
+.submit-row .btn:active {
+  translate: 0 0;
+}
+.submit-row .btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .submit-row .btn {
+    width: 100%;
+  }
+}
+.apply-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  max-width: var(--wrap);
+  margin-inline: auto;
+}
+.apply-layout .apply-card {
+  max-width: none;
+  margin: 0;
+}
+.apply-side {
+  position: sticky;
+  top: 6rem;
+}
+.apply-side__note {
+  margin: 1.5rem 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--gold);
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: var(--navy);
+}
+.meter {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  margin-bottom: 1.75rem;
+}
+.meter__label {
+  margin-right: .75rem;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.meter__seg {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+}
+.apply-card:has(#ref:valid) .meter__seg:nth-of-type(1) {
+  background: var(--gold);
+}
+.apply-card:has(#dob:valid) .meter__seg:nth-of-type(2) {
+  background: var(--gold);
+}
+.apply-card:has(#firstname:valid) .meter__seg:nth-of-type(3) {
+  background: var(--gold);
+}
+.apply-card:has(#lastname:valid) .meter__seg:nth-of-type(4) {
+  background: var(--gold);
+}
+.apply-card:has(input[name="gender"]:checked) .meter__seg:nth-of-type(5) {
+  background: var(--gold);
+}
+.apply-card:has(#street:valid) .meter__seg:nth-of-type(6) {
+  background: var(--gold);
+}
+.apply-card:has(#suburb:valid) .meter__seg:nth-of-type(7) {
+  background: var(--gold);
+}
+.apply-card:has(#state:valid) .meter__seg:nth-of-type(8) {
+  background: var(--gold);
+}
+.apply-card:has(#postcode:valid) .meter__seg:nth-of-type(9) {
+  background: var(--gold);
+}
+.apply-card:has(#email:valid) .meter__seg:nth-of-type(10) {
+  background: var(--gold);
+}
+.apply-card:has(#phone:valid) .meter__seg:nth-of-type(11) {
+  background: var(--gold);
+}
+.apply-card:has(input[name="declaration"]:checked) .meter__seg:nth-of-type(12) {
+  background: var(--gold);
+}
+.apply-card:has(.application:valid) .meter__seg {
+  background: #2e7d4f;
+}
+.application p:has(:focus) label {
+  color: var(--maroon);
+}
+.application p:has(:focus) {
+  translate: 4px 0;
+}
+@media (max-width: 860px) {
+  .apply-layout {
+    grid-template-columns: 1fr;
+  }
+  .apply-side {
+    position: static;
+  }
+  .apply-side .photo-slot {
+    --ratio: 16 / 10;
+  }
+}
+@media (max-width: 640px) {
+  .meter__label {
+    display: none;
+  }
+}
+.apply-card {
+  border-radius: 3px;
+}
+@media (max-width: 860px) {
+  .apply-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.apply-side .photo-slot {
+  --ratio: 610 / 342;
+}
+.field-hint {
+  margin: 0 0 .75rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+.application .declaration {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.apply-card {
+  background: #fff;
+  border-radius: var(--radius-xl);
+}
+.apply-side__note {
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: #fff;
+}
+.meter__seg {
+  border-radius: 999px;
+}
+.ready-note {
+  border-radius: var(--radius);
+}
+.apply-side__note {
+  padding: .9rem 1.1rem;
+}
+.apply-card {
+  border: 2px solid var(--gold);
+}
+.apply-side__note {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
