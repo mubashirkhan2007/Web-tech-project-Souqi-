@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for a role at Souqi, an online retail platform in Doha, Qatar.">
+  <title>Apply | Souqi</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="apply.css">
+  <!-- Embedded CSS example -->
+  <style>
+    legend { font-weight: 700; }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Souqi, home">
+        <img class="brand-mark" src="images/logo-mark.png" width="34" height="38" alt="">
+        <span class="brand-name">SOUQI</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="apply.html" aria-current="page">Apply <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="apply-title">
+      <div class="wrap">
+        <p class="kicker hero-in d1">Join Souqi</p>
+        <h1 id="apply-title" class="hero-in d2">Apply for a <em>role.</em></h1>
+        <p class="jobs-intro hero-in d3" style="max-width: 60ch;">Enter the reference number from our <a href="jobs.html">jobs page</a>, then fill in your details. All fields are required except Other skills.</p>
+      </div>
+    </section>
+    <div class="apply-body">
+      <div class="wrap">
+        <div class="apply-layout">
+          <div class="apply-side">
+            <figure class="photo-slot photo-slot--framed">
+          <div class="photo-slot__media"><img src="images/apply-side.jpg" alt="A man with a backpack walking confidently, with the words Innovation Builds Tomorrow" width="607" height="337"></div>
+          <figcaption>Your next chapter could start here.</figcaption>
+        </figure>
+            <p class="apply-side__note">We reply to every applicant within 10 business days.</p>
+          </div>
+        <div class="apply-card">
+          <div class="meter" aria-hidden="true"><span class="meter__label">Your progress</span><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i><i class="meter__seg"></i></div>
+          <form class="application" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+      <div class="form-grid">
+        <p><label for="ref">Job reference number</label>
+          <input type="text" id="ref" name="ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers, e.g. SQF01" required></p>
+        <p><label for="dob">Date of birth</label>
+          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" title="Use the format dd/mm/yyyy" required></p>
+        <p><label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, maximum 20" autocomplete="given-name" required></p>
+        <p><label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, maximum 20" autocomplete="family-name" required></p>
+        <fieldset>
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="female" required> Female</label>
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </fieldset>
+        <p><label for="street">Street address</label>
+          <input type="text" id="street" name="street" maxlength="40" autocomplete="street-address" required></p>
+        <p><label for="suburb">Suburb/Town</label>
+          <input type="text" id="suburb" name="suburb" maxlength="40" required></p>
+        <p><label for="state">State</label>
+          <select id="state" name="state" required>
+            <option value="">Select a state</option>
+            <option>VIC</option><option>NSW</option><option>QLD</option><option>NT</option>
+            <option>WA</option><option>SA</option><option>TAS</option><option>ACT</option>
+          </select></p>
+        <p><label for="postcode">Postcode</label>
+          <input type="text" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}" title="Exactly 4 digits" inputmode="numeric" required></p>
+        <p><label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required></p>
+        <p><label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" title="8 to 12 digits, no spaces" required></p>
+      </div>
+      <fieldset>
+        <legend>Skills</legend>
+        <p class="field-hint">Select every skill that applies to you, then confirm below.</p>
+        <label><input type="checkbox" name="skills" value="html"> HTML5</label>
+        <label><input type="checkbox" name="skills" value="css"> CSS3</label>
+        <label><input type="checkbox" name="skills" value="git"> Git</label>
+        <label><input type="checkbox" name="skills" value="figma"> Figma</label>
+        <label><input type="checkbox" name="skills" value="accessibility"> Accessibility</label>
+        <label class="declaration"><input type="checkbox" name="declaration" value="confirmed" required> I have selected every skill that applies to me</label>
+      </fieldset>
+      <p><label for="otherskills">Other skills</label>
+        <textarea id="otherskills" name="otherskills" rows="4"></textarea></p>
+      <div class="submit-row">
+        <button type="submit" class="btn">Submit application <span aria-hidden="true">&rarr;</span></button>
+        <p class="ready-note" role="status">All set. Your application is ready to send.</p>
+      </div>
+    </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="pattern-band" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--light" href="index.html" aria-label="Souqi, home"><img class="footer-logo" src="images/logo.png" width="170" height="168" alt=""></a>
+        <p>Good things happen when we build together.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About us</a>
+        <a href="apply.html">Apply</a>
+      </nav>
+      <div class="footer-col">
+        <h2>Say hello</h2>
+        <a href="mailto:info@souqi.com">info@souqi.com</a>
+        <!-- Replace these two links with your team's own Jira project and GitHub repository. -->
+        <a href="https://souqi.atlassian.net/jira/software/projects/GS/summary" target="_blank" rel="noopener noreferrer">Jira project <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/mubashirkhan2007/Web-tech-project-Souqi-" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">&nearr;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; 2026 Souqi. A fictional company created for a university project.</p>
+      <a href="#main">Back to top <span aria-hidden="true">&uarr;</span></a>
+    </div>
+  </footer></body>
+</html>
