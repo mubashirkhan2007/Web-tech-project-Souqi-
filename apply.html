@@ -85,12 +85,20 @@
           <input type="text" id="street" name="street" maxlength="40" autocomplete="street-address" required></p>
         <p><label for="suburb">Suburb/Town</label>
           <input type="text" id="suburb" name="suburb" maxlength="40" required></p>
-        <p><label for="state">State</label>
-          <select id="state" name="state" required>
-            <option value="">Select a state</option>
-            <option>VIC</option><option>NSW</option><option>QLD</option><option>NT</option>
-            <option>WA</option><option>SA</option><option>TAS</option><option>ACT</option>
-          </select></p>
+<p>
+    <label for="state">Municipality:</label>
+    <select id="state" name="state" required>
+        <option value="">Select Municipality</option>
+        <option value="Doha">Doha</option>
+        <option value="Al Rayyan">Al Rayyan</option>
+        <option value="Al Wakrah">Al Wakrah</option>
+        <option value="Al Khor">Al Khor</option>
+        <option value="Al Shamal">Al Shamal</option>
+        <option value="Umm Salal">Umm Salal</option>
+        <option value="Al Daayen">Al Daayen</option>
+        <option value="Al Shahaniya">Al Shahaniya</option>
+    </select>
+</p>
         <p><label for="postcode">Postcode</label>
           <input type="text" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}" title="Exactly 4 digits" inputmode="numeric" required></p>
         <p><label for="email">Email</label>
