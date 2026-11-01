@@ -1,80 +1,345 @@
-/* G05 — About page only: learned selectors, colours, borders and tables */
-
-/* Maroon introduction with a gold detail */
-.intro {
-    background-color: var(--maroon);
-    color: #FFFFFF;
-    border: 0;
-    border-left: 7px solid var(--gold);
-    padding-top: 35px;
-    padding-bottom: 35px;
+/* SOUQI - about.css */
+.d4 {
+  --d: .5s;
 }
-.intro h2 { color: #FFFFFF; font-size: 34px; }
-.eyebrow {
-    color: #F5D5A3;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 9px;
+.about-body {
+  padding: clamp(3rem, 6vw, 5rem) 0;
 }
-
-/* Plum accent on group info; gold on team section */
-.group-details { border-top: 5px solid var(--plum); }
-.team-section { border-top: 5px solid var(--gold); }
-.team-section h2 { color: var(--plum); }
-
-ul ul { margin-top: 6px; }
-.team-list dt {
-    color: var(--blue);
-    font-weight: bold;
-    margin-top: 22px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--border);
+.about-sec {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
-.team-list dd { margin: 7px 0 7px 18px; }
+.about-sec h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+.about-sec ul {
+  padding-left: 1.2rem;
+}
+.group-details {
+  padding: 1.75rem 2rem;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--plum);
+  border-radius: var(--radius);
+}
+.team-section > p {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.member {
+  padding: 1.5rem 1.75rem;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--navy);
+  border-radius: var(--radius);
+}
+.member:nth-child(2) {
+  border-top-color: var(--plum);
+}
+.member:nth-child(3) {
+  border-top-color: var(--maroon);
+}
+.member:nth-child(4) {
+  border-top-color: var(--gold);
+}
+.member:hover {
+  translate: 0 -4px;
+}
+.member dt {
+  margin-bottom: .6rem;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  line-height: 1.2;
+  color: var(--navy);
+}
+.member dd {
+  margin: 0 0 .5rem;
+}
 .student-id {
-    display: inline-block;
-    background-color: #F1E9F2;
-    color: #543861;
-    border: 1px solid #D7C5DD;
-    border-radius: 5px;
-    padding: 2px 9px;
-    margin-left: 8px;
-    font-size: 13px;
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .1rem .55rem;
+  font-family: "Courier New", monospace;
+  font-size: .8rem;
+  vertical-align: middle;
+  background: #1F3A5F;
+  color: #E9D9B8;
+  border-radius: 3px;
 }
-
-/* Photo: required figure border, gold against plum */
-.photo-section { background-color: #F0EBF2; }
-figure {
-    margin: 0;
-    padding: 15px;
-    border: 3px solid var(--plum);
-    border-radius: 10px;
-    background-color: white;
-    text-align: center;
+.photo-section figure {
+  display: inline-block;
+  max-width: 100%;
+  padding: .6rem;
+  background: var(--ivory);
+  border: 4px solid #1F3A5F;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
-figure img { max-width: 100%; height: auto; border-radius: 4px; }
-figcaption { color: var(--maroon); margin-top: 10px; font-style: italic; }
-
-/* Fun-facts table: required hex colours and row hover */
-.facts-section { border-top: 5px solid var(--maroon); }
-.table-wrap { overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; }
-caption { color: #6B4C7A; font-weight: bold; padding: 12px; }
-th, td { border: 1px solid #DDD4C7; padding: 12px; text-align: left; }
-thead { background-color: #1F3A5F; color: #FFFFFF; }
-tbody tr:nth-child(even) { background-color: #F7F3EC; }
-tbody tr:hover { background-color: #F1E4D7; }
-
-/* Respect and inclusion section */
-.acknowledgement {
-    background-color: #F5EDF1;
-    border-left: 6px solid var(--plum);
+.photo-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-.acknowledgement h2 { color: var(--maroon); }
-
-@media (max-width: 600px) {
-    .intro h2 { font-size: 27px; }
-    .student-id { margin-left: 0; }
-    .team-list dd { margin-left: 10px; }
+.photo-section figure:hover img {
+  transform: scale(1.04);
+}
+.photo-section figcaption {
+  margin-top: .6rem;
+  font-style: italic;
+  color: var(--maroon);
+}
+.facts-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #FFFFFF;
+}
+.facts-section caption {
+  padding: .75rem 0;
+  font-weight: 700;
+  text-align: left;
+  color: #6B4C7A;
+}
+.facts-section th, .facts-section td {
+  padding: .85rem 1rem;
+  border: 1px solid #DDD4C7;
+  text-align: left;
+}
+.facts-section thead th {
+  background: #1F3A5F;
+  color: #FFFFFF;
+}
+.facts-section tbody tr:nth-child(even) {
+  background: #F7F3EC;
+}
+.facts-section tbody tr:hover {
+  background: #F1E4D7;
+}
+@media (max-width: 900px) {
+  .team-list {
+    grid-template-columns: 1fr;
+  }
+}
+.member {
+  border-radius: calc(var(--radius) + 2px);
+}
+.member:hover {
+  translate: 0 -4px;
+}
+.member {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
+  padding: 1.6rem 1.9rem;
+}
+.member:nth-child(2) {
+  border-left-color: var(--gold);
+}
+.member:nth-child(3) {
+  border-left-color: var(--plum);
+}
+.member:nth-child(4) {
+  border-left-color: var(--maroon);
+}
+.member dd {
+  margin: 0 0 .5rem;
+  overflow-wrap: anywhere;
+}
+.member dd:last-child {
+  margin-bottom: 0;
+}
+.member .student-id {
+  display: inline-block;
+  margin-left: .5rem;
+  vertical-align: middle;
+}
+@media (max-width: 640px) {
+  .team-list {
+    grid-template-columns: 1fr;
+  }
+}
+.page-hero__split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.page-hero__split .photo-slot {
+  margin-right: 14px;
+}
+.team-list {
+  counter-reset: member;
+}
+.member {
+  counter-increment: member;
+  position: relative;
+}
+.member::after {
+  content: "0" counter(member);
+  position: absolute;
+  top: .9rem;
+  right: 1.25rem;
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: rgba(176, 138, 60, .35);
+}
+.member:hover::after {
+  color: var(--gold);
+  translate: 0 -3px;
+}
+.group-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.group-details h2 {
+  grid-column: 1 / -1;
+}
+.group-details .photo-slot {
+  margin-right: 14px;
+}
+.photo-frame {
+  position: relative;
+  isolation: isolate;
+  max-width: 46rem;
+  margin: 0 auto 1rem;
+  padding: 0;
+}
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  z-index: -1;
+  border: 2px solid var(--gold);
+}
+.photo-frame:hover::before {
+  inset: 8px -8px -8px 8px;
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 860px) {
+  .page-hero__split, .group-details {
+    grid-template-columns: 1fr;
+  }
+  .group-details h2 {
+    grid-column: auto;
+  }
+  .group-details .photo-slot {
+    margin-top: 1.5rem;
+  }
+}
+.member {
+  border-radius: 3px;
+}
+.member:hover {
+  transform: translateY(-6px);
+}
+.about-body {
+  background: var(--paper);
+}
+.about-sec {
+  position: relative;
+}
+.about-sec h2 {
+  letter-spacing: -.035em;
+}
+.team-list {
+  gap: .8rem;
+}
+.member {
+  border: 1px solid rgba(20,40,63,.12);
+  border-top: 0;
+  border-left: 4px solid var(--member-accent,var(--navy));
+}
+.member:nth-child(1) {
+  --member-accent: var(--navy);
+}
+.member:nth-child(2) {
+  --member-accent: var(--plum);
+}
+.member:nth-child(3) {
+  --member-accent: var(--maroon);
+}
+.member:nth-child(4) {
+  --member-accent: var(--gold);
+}
+.member::before {
+  content: "TEAM / SOUQI";
+  display: block;
+  margin-bottom: .8rem;
+  color: var(--member-accent);
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+@media (max-width: 860px) {
+  .page-hero__split, .group-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .photo-frame::before {
+    inset: 10px 0 -10px 10px;
+  }
+  .page-hero__split .photo-slot, .group-details .photo-slot {
+    margin-right: 0;
+  }
+}
+.group-details .photo-slot {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+}
+.group-details .photo-slot {
+  --ratio: 610 / 342;
+}
+.member q:not([dir]) {
+  quotes: "“" "”";
+}
+.facts-section th[scope="row"] {
+  text-align: left;
+  color: var(--navy);
+}
+.about-sec {
+  border-radius: var(--radius-lg);
+  background: #fff;
+}
+.member {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.student-id {
+  border-radius: 8px;
+}
+.photo-frame, .photo-section figure {
+  border-radius: var(--radius-lg);
+}
+.photo-section img {
+  border-radius: var(--radius-lg);
+}
+.team-section {
+  background: transparent;
+  border-radius: 0;
+}
+.photo-section, .facts-section {
+  background: transparent;
+  border-radius: 0;
+}
+.photo-frame, .photo-section figure {
+  overflow: hidden;
+}
+.about-sec {
+  border: 1px solid var(--border);
+}
+.member {
+  border: 2px solid var(--member-accent, var(--navy));
+}
+.photo-frame, .photo-section figure {
+  border: 2px solid var(--navy);
 }
